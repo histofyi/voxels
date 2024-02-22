@@ -9,7 +9,7 @@ from biopandas.pdb import PandasPdb
 import constants
 import functions
 
-pdb_code = '1hhk'
+pdb_code = '1hhj'
 
 
 def load_pdb_file_to_dataframe(pdb_code:str, domain:str) -> Dict:
