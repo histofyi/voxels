@@ -63,7 +63,6 @@ def find_voxels_for_structure(peptide_df, voxels, voxel_size:int=1):
     positions = []
     structure_voxels = {}
 
-    target_atom_name = 'CA', # this is hard-coded for now, but should be a parameter in the future    
 
     # iterate through the rows of the dataframe to generate a list of coordinates to check
     for index, row in peptide_df['ATOM'].iterrows():
@@ -76,7 +75,7 @@ def find_voxels_for_structure(peptide_df, voxels, voxel_size:int=1):
         residue_number = row['residue_number']
         
         # if the atom name is the target atom name, add the residue name to the sequence list and the coordinates to the coordinates_to_check list
-        if atom_name == target_atom_name:
+        if atom_name == 'CA': # this is hard-coded for now, but should be a parameter in the future 
             if residue_number not in positions:
                 sequence.append(row['residue_name'])
                 coordinates_to_check.append((x,y,z))
@@ -93,7 +92,7 @@ def find_voxels_for_structure(peptide_df, voxels, voxel_size:int=1):
                 structure_voxels[str(p)] = {
                     'position': p,
                     'voxel_label': voxel,
-                    'atom_name': target_atom_name,
+                    'atom_name': 'CA',
                     'atom_coordinates': coordinate,
                     'voxel_start': voxels[voxel]['start'],
                     'voxel_centre': voxels[voxel]['centre'],
