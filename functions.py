@@ -3,6 +3,18 @@ from typing import List, Dict
 
 
 def create_voxel_grid(centre_of_mass:List[float], box_xyz:List[float], voxel_size:float, range_offset:int=0, x_offset:int=0, y_offset:int=0, z_offset:int=0):
+    
+
+    params = dict(zip(locals().keys(), locals().values()))
+
+    voxel_grid = {
+        "params": params,
+        "voxels": {}, 
+        "labels": [],
+        "metadata": {}
+    }
+    
+
     cx, cy, cz = centre_of_mass
     length, width, height = box_xyz
 
@@ -18,15 +30,6 @@ def create_voxel_grid(centre_of_mass:List[float], box_xyz:List[float], voxel_siz
     num_cubes_y = int(width / voxel_size)
     num_cubes_z = int(height / voxel_size)
 
-    print (f"Number of cubes in x: {num_cubes_x}")
-    print (f"Number of cubes in y: {num_cubes_y}")
-    print (f"Number of cubes in z: {num_cubes_z}")
-
-    voxel_grid = {
-        "params": {},
-        "voxels": {}, 
-        "labels": []
-    }
 
 
     for z in range(num_cubes_z + range_offset):
@@ -41,8 +44,7 @@ def create_voxel_grid(centre_of_mass:List[float], box_xyz:List[float], voxel_siz
                 voxel_grid['labels'].append(voxel_label)
     
     voxel_grid['params']['count'] = len(voxel_grid['voxels'])
-    print (f"Number of voxels: {voxel_grid['params']['count']}")
-
+    
     return voxel_grid
 
 
