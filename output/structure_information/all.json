@@ -1,0 +1,3013 @@
+{
+    "metadata": {
+        "sql_query": "select pdb_code, locus, allele_slug, peptide_sequence, resolution from core where peptide_length='9' and peptide_features='correct_sequence_and_length' and complex_type='class_i_with_peptide' and (locus='hla-a' or locus='hla-b' or locus='hla-c') order by resolution asc",
+        "query_variables": [
+            "pdb_code",
+            "locus",
+            "allele_slug",
+            "peptide_sequence",
+            "resolution"
+        ],
+        "conditions": {
+            "peptide_length": "9",
+            "peptide_features": "correct_sequence_and_length",
+            "complex_type": "class_i_with_peptide"
+        },
+        "order_by": "resolution asc",
+        "loci": [
+            "hla-a",
+            "hla-b",
+            "hla-c"
+        ]
+    },
+    "structures": {
+        "1k5n": {
+            "pdb_code": "1k5n",
+            "locus": "hla-b",
+            "allele": "HLA-B*27:09",
+            "allele_slug": "hla_b_27_09",
+            "peptide": "GRFAAAIAK",
+            "pmhc_key": "hla_b_27_09_grfaaaiak",
+            "resolution": 1.09
+        },
+        "3mre": {
+            "pdb_code": "3mre",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "GLCTLVAML",
+            "pmhc_key": "hla_a_02_01_glctlvaml",
+            "resolution": 1.1
+        },
+        "7r7w": {
+            "pdb_code": "7r7w",
+            "locus": "hla-b",
+            "allele": "HLA-B*53:01",
+            "allele_slug": "hla_b_53_01",
+            "peptide": "QATQEVKNW",
+            "pmhc_key": "hla_b_53_01_qatqevknw",
+            "resolution": 1.17
+        },
+        "4u1m": {
+            "pdb_code": "4u1m",
+            "locus": "hla-b",
+            "allele": "HLA-B*42:01",
+            "allele_slug": "hla_b_42_01",
+            "peptide": "RPQVPLRPM",
+            "pmhc_key": "hla_b_42_01_rpqvplrpm",
+            "resolution": 1.18
+        },
+        "3czf": {
+            "pdb_code": "3czf",
+            "locus": "hla-b",
+            "allele": "HLA-B*27:09",
+            "allele_slug": "hla_b_27_09",
+            "peptide": "RRRWHRWRL",
+            "pmhc_key": "hla_b_27_09_rrrwhrwrl",
+            "resolution": 1.2
+        },
+        "6y26": {
+            "pdb_code": "6y26",
+            "locus": "hla-b",
+            "allele": "HLA-B*27:05",
+            "allele_slug": "hla_b_27_05",
+            "peptide": "GRLNAPIKV",
+            "pmhc_key": "hla_b_27_05_grlnapikv",
+            "resolution": 1.2
+        },
+        "6mt3": {
+            "pdb_code": "6mt3",
+            "locus": "hla-b",
+            "allele": "HLA-B*18:01",
+            "allele_slug": "hla_b_18_01",
+            "peptide": "FEDLRVLSF",
+            "pmhc_key": "hla_b_18_01_fedlrvlsf",
+            "resolution": 1.21
+        },
+        "7tuc": {
+            "pdb_code": "7tuc",
+            "locus": "hla-b",
+            "allele": "HLA-B*44:05",
+            "allele_slug": "hla_b_44_05",
+            "peptide": "EEFGRAFSF",
+            "pmhc_key": "hla_b_44_05_eefgrafsf",
+            "resolution": 1.25
+        },
+        "6y2a": {
+            "pdb_code": "6y2a",
+            "locus": "hla-b",
+            "allele": "HLA-B*27:05",
+            "allele_slug": "hla_b_27_05",
+            "peptide": "GRLNQPIKV",
+            "pmhc_key": "hla_b_27_05_grlnqpikv",
+            "resolution": 1.25
+        },
+        "6y29": {
+            "pdb_code": "6y29",
+            "locus": "hla-b",
+            "allele": "HLA-B*27:09",
+            "allele_slug": "hla_b_27_09",
+            "peptide": "GRLNEPIKV",
+            "pmhc_key": "hla_b_27_09_grlnepikv",
+            "resolution": 1.28
+        },
+        "3d25": {
+            "pdb_code": "3d25",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "VLHDDLLEA",
+            "pmhc_key": "hla_a_02_01_vlhddllea",
+            "resolution": 1.3
+        },
+        "3mrg": {
+            "pdb_code": "3mrg",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "CINGVCWTV",
+            "pmhc_key": "hla_a_02_01_cingvcwtv",
+            "resolution": 1.3
+        },
+        "6mt6": {
+            "pdb_code": "6mt6",
+            "locus": "hla-b",
+            "allele": "HLA-B*37:01",
+            "allele_slug": "hla_b_37_01",
+            "peptide": "FEDLRVLSF",
+            "pmhc_key": "hla_b_37_01_fedlrvlsf",
+            "resolution": 1.31
+        },
+        "7kgq": {
+            "pdb_code": "7kgq",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "LLLDRLNQL",
+            "pmhc_key": "hla_a_02_01_llldrlnql",
+            "resolution": 1.34
+        },
+        "2bvp": {
+            "pdb_code": "2bvp",
+            "locus": "hla-b",
+            "allele": "HLA-B*57:03",
+            "allele_slug": "hla_b_57_03",
+            "peptide": "ISPRTLDAW",
+            "pmhc_key": "hla_b_57_03_isprtldaw",
+            "resolution": 1.35
+        },
+        "6mtl": {
+            "pdb_code": "6mtl",
+            "locus": "hla-b",
+            "allele": "HLA-B*44:05",
+            "allele_slug": "hla_b_44_05",
+            "peptide": "FEDLRVLSF",
+            "pmhc_key": "hla_b_44_05_fedlrvlsf",
+            "resolution": 1.35
+        },
+        "6joz": {
+            "pdb_code": "6joz",
+            "locus": "hla-a",
+            "allele": "HLA-A*11:01",
+            "allele_slug": "hla_a_11_01",
+            "peptide": "ATIGTAMYK",
+            "pmhc_key": "hla_a_11_01_atigtamyk",
+            "resolution": 1.35
+        },
+        "6y2b": {
+            "pdb_code": "6y2b",
+            "locus": "hla-b",
+            "allele": "HLA-B*27:09",
+            "allele_slug": "hla_b_27_09",
+            "peptide": "GRLNQPIKV",
+            "pmhc_key": "hla_b_27_09_grlnqpikv",
+            "resolution": 1.37
+        },
+        "6y27": {
+            "pdb_code": "6y27",
+            "locus": "hla-b",
+            "allele": "HLA-B*27:09",
+            "allele_slug": "hla_b_27_09",
+            "peptide": "GRLNAPIKV",
+            "pmhc_key": "hla_b_27_09_grlnapikv",
+            "resolution": 1.38
+        },
+        "6pyw": {
+            "pdb_code": "6pyw",
+            "locus": "hla-b",
+            "allele": "HLA-B*27:05",
+            "allele_slug": "hla_b_27_05",
+            "peptide": "LRNQSVFNF",
+            "pmhc_key": "hla_b_27_05_lrnqsvfnf",
+            "resolution": 1.38
+        },
+        "4u1j": {
+            "pdb_code": "4u1j",
+            "locus": "hla-b",
+            "allele": "HLA-B*42:01",
+            "allele_slug": "hla_b_42_01",
+            "peptide": "TPQDLNTML",
+            "pmhc_key": "hla_b_42_01_tpqdlntml",
+            "resolution": 1.38
+        },
+        "6j2a": {
+            "pdb_code": "6j2a",
+            "locus": "hla-a",
+            "allele": "HLA-A*30:03",
+            "allele_slug": "hla_a_30_03",
+            "peptide": "CTELKLSDY",
+            "pmhc_key": "hla_a_30_03_ctelklsdy",
+            "resolution": 1.4
+        },
+        "4qrs": {
+            "pdb_code": "4qrs",
+            "locus": "hla-b",
+            "allele": "HLA-B*08:01",
+            "allele_slug": "hla_b_08_01",
+            "peptide": "ELKRKMIYM",
+            "pmhc_key": "hla_b_08_01_elkrkmiym",
+            "resolution": 1.4
+        },
+        "3mrk": {
+            "pdb_code": "3mrk",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "PLFQVPEPV",
+            "pmhc_key": "hla_a_02_01_plfqvpepv",
+            "resolution": 1.4
+        },
+        "7kgp": {
+            "pdb_code": "7kgp",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "GMSRIGMEV",
+            "pmhc_key": "hla_a_02_01_gmsrigmev",
+            "resolution": 1.4
+        },
+        "5wmq": {
+            "pdb_code": "5wmq",
+            "locus": "hla-b",
+            "allele": "HLA-B*08:01",
+            "allele_slug": "hla_b_08_01",
+            "peptide": "ELRSRYWAI",
+            "pmhc_key": "hla_b_08_01_elrsrywai",
+            "resolution": 1.4
+        },
+        "2a83": {
+            "pdb_code": "2a83",
+            "locus": "hla-b",
+            "allele": "HLA-B*27:05",
+            "allele_slug": "hla_b_27_05",
+            "peptide": "RRRWHRWRL",
+            "pmhc_key": "hla_b_27_05_rrrwhrwrl",
+            "resolution": 1.4
+        },
+        "4qrt": {
+            "pdb_code": "4qrt",
+            "locus": "hla-b",
+            "allele": "HLA-B*08:01",
+            "allele_slug": "hla_b_08_01",
+            "peptide": "ELNRKMIYM",
+            "pmhc_key": "hla_b_08_01_elnrkmiym",
+            "resolution": 1.4
+        },
+        "3mrb": {
+            "pdb_code": "3mrb",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "NLVPMVHTV",
+            "pmhc_key": "hla_a_02_01_nlvpmvhtv",
+            "resolution": 1.4
+        },
+        "6vb2": {
+            "pdb_code": "6vb2",
+            "locus": "hla-b",
+            "allele": "HLA-B*15:02",
+            "allele_slug": "hla_b_15_02",
+            "peptide": "ELRARQECY",
+            "pmhc_key": "hla_b_15_02_elrarqecy",
+            "resolution": 1.41
+        },
+        "5ib2": {
+            "pdb_code": "5ib2",
+            "locus": "hla-b",
+            "allele": "HLA-B*27:05",
+            "allele_slug": "hla_b_27_05",
+            "peptide": "RRKWRRWHL",
+            "pmhc_key": "hla_b_27_05_rrkwrrwhl",
+            "resolution": 1.44
+        },
+        "6pyj": {
+            "pdb_code": "6pyj",
+            "locus": "hla-b",
+            "allele": "HLA-B*27:05",
+            "allele_slug": "hla_b_27_05",
+            "peptide": "LRNQSVFNF",
+            "pmhc_key": "hla_b_27_05_lrnqsvfnf",
+            "resolution": 1.44
+        },
+        "6pyv": {
+            "pdb_code": "6pyv",
+            "locus": "hla-b",
+            "allele": "HLA-B*27:03",
+            "allele_slug": "hla_b_27_03",
+            "peptide": "LRNQSVFNF",
+            "pmhc_key": "hla_b_27_03_lrnqsvfnf",
+            "resolution": 1.45
+        },
+        "1x7q": {
+            "pdb_code": "1x7q",
+            "locus": "hla-a",
+            "allele": "HLA-A*11:01",
+            "allele_slug": "hla_a_11_01",
+            "peptide": "KTFPPTEPK",
+            "pmhc_key": "hla_a_11_01_ktfpptepk",
+            "resolution": 1.45
+        },
+        "7m8u": {
+            "pdb_code": "7m8u",
+            "locus": "hla-b",
+            "allele": "HLA-B*35:01",
+            "allele_slug": "hla_b_35_01",
+            "peptide": "IPFAMQMAY",
+            "pmhc_key": "hla_b_35_01_ipfamqmay",
+            "resolution": 1.45
+        },
+        "1ogt": {
+            "pdb_code": "1ogt",
+            "locus": "hla-b",
+            "allele": "HLA-B*27:05",
+            "allele_slug": "hla_b_27_05",
+            "peptide": "RRKWRRWHL",
+            "pmhc_key": "hla_b_27_05_rrkwrrwhl",
+            "resolution": 1.47
+        },
+        "7m8t": {
+            "pdb_code": "7m8t",
+            "locus": "hla-a",
+            "allele": "HLA-A*11:01",
+            "allele_slug": "hla_a_11_01",
+            "peptide": "NSASFSTFK",
+            "pmhc_key": "hla_a_11_01_nsasfstfk",
+            "resolution": 1.5
+        },
+        "6q3k": {
+            "pdb_code": "6q3k",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "NLVPMVATV",
+            "pmhc_key": "hla_a_02_01_nlvpmvatv",
+            "resolution": 1.5
+        },
+        "6o4z": {
+            "pdb_code": "6o4z",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "KLVVVAVGV",
+            "pmhc_key": "hla_a_02_01_klvvvavgv",
+            "resolution": 1.5
+        },
+        "7wkj": {
+            "pdb_code": "7wkj",
+            "locus": "hla-a",
+            "allele": "HLA-A*11:01",
+            "allele_slug": "hla_a_11_01",
+            "peptide": "KTFPPTEPK",
+            "pmhc_key": "hla_a_11_01_ktfpptepk",
+            "resolution": 1.5
+        },
+        "6j1w": {
+            "pdb_code": "6j1w",
+            "locus": "hla-a",
+            "allele": "HLA-A*30:01",
+            "allele_slug": "hla_a_30_01",
+            "peptide": "AIFQSSMTK",
+            "pmhc_key": "hla_a_30_01_aifqssmtk",
+            "resolution": 1.5
+        },
+        "7jyv": {
+            "pdb_code": "7jyv",
+            "locus": "hla-a",
+            "allele": "HLA-A*24:02",
+            "allele_slug": "hla_a_24_02",
+            "peptide": "YFSPIRVTF",
+            "pmhc_key": "hla_a_24_02_yfspirvtf",
+            "resolution": 1.51
+        },
+        "6pz5": {
+            "pdb_code": "6pz5",
+            "locus": "hla-b",
+            "allele": "HLA-B*27:03",
+            "allele_slug": "hla_b_27_03",
+            "peptide": "LRNQSVFNF",
+            "pmhc_key": "hla_b_27_03_lrnqsvfnf",
+            "resolution": 1.53
+        },
+        "5eu5": {
+            "pdb_code": "5eu5",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "YLEPAPVTA",
+            "pmhc_key": "hla_a_02_01_ylepapvta",
+            "resolution": 1.54
+        },
+        "7kgr": {
+            "pdb_code": "7kgr",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "LQLPQGTTL",
+            "pmhc_key": "hla_a_02_01_lqlpqgttl",
+            "resolution": 1.55
+        },
+        "6mt5": {
+            "pdb_code": "6mt5",
+            "locus": "hla-b",
+            "allele": "HLA-B*37:01",
+            "allele_slug": "hla_b_37_01",
+            "peptide": "FEDLRLLSF",
+            "pmhc_key": "hla_b_37_01_fedlrllsf",
+            "resolution": 1.55
+        },
+        "6mt4": {
+            "pdb_code": "6mt4",
+            "locus": "hla-b",
+            "allele": "HLA-B*37:01",
+            "allele_slug": "hla_b_37_01",
+            "peptide": "FEDLRVSSF",
+            "pmhc_key": "hla_b_37_01_fedlrvssf",
+            "resolution": 1.55
+        },
+        "1uxs": {
+            "pdb_code": "1uxs",
+            "locus": "hla-b",
+            "allele": "HLA-B*27:05",
+            "allele_slug": "hla_b_27_05",
+            "peptide": "RRRWRRLTV",
+            "pmhc_key": "hla_b_27_05_rrrwrrltv",
+            "resolution": 1.55
+        },
+        "5nmh": {
+            "pdb_code": "5nmh",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "SLYNTIATL",
+            "pmhc_key": "hla_a_02_01_slyntiatl",
+            "resolution": 1.55
+        },
+        "7kgs": {
+            "pdb_code": "7kgs",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "ALNTPKDHI",
+            "pmhc_key": "hla_a_02_01_alntpkdhi",
+            "resolution": 1.58
+        },
+        "5wmr": {
+            "pdb_code": "5wmr",
+            "locus": "hla-b",
+            "allele": "HLA-B*08:01",
+            "allele_slug": "hla_b_08_01",
+            "peptide": "QIKVRVDMV",
+            "pmhc_key": "hla_b_08_01_qikvrvdmv",
+            "resolution": 1.58
+        },
+        "6o4y": {
+            "pdb_code": "6o4y",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "KLVVGAVGV",
+            "pmhc_key": "hla_a_02_01_klvvgavgv",
+            "resolution": 1.58
+        },
+        "4u1h": {
+            "pdb_code": "4u1h",
+            "locus": "hla-b",
+            "allele": "HLA-B*07:02",
+            "allele_slug": "hla_b_07_02",
+            "peptide": "TPQDLNTML",
+            "pmhc_key": "hla_b_07_02_tpqdlntml",
+            "resolution": 1.59
+        },
+        "2v2x": {
+            "pdb_code": "2v2x",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "SLFNTVATL",
+            "pmhc_key": "hla_a_02_01_slfntvatl",
+            "resolution": 1.6
+        },
+        "2vll": {
+            "pdb_code": "2vll",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "GILGFVFTL",
+            "pmhc_key": "hla_a_02_01_gilgfvftl",
+            "resolution": 1.6
+        },
+        "6v2q": {
+            "pdb_code": "6v2q",
+            "locus": "hla-b",
+            "allele": "HLA-B*57:03",
+            "allele_slug": "hla_b_57_03",
+            "peptide": "LSSPVTKSF",
+            "pmhc_key": "hla_b_57_03_lsspvtksf",
+            "resolution": 1.6
+        },
+        "6j29": {
+            "pdb_code": "6j29",
+            "locus": "hla-a",
+            "allele": "HLA-A*30:03",
+            "allele_slug": "hla_a_30_03",
+            "peptide": "QIMYNYPAM",
+            "pmhc_key": "hla_a_30_03_qimynypam",
+            "resolution": 1.6
+        },
+        "1m6o": {
+            "pdb_code": "1m6o",
+            "locus": "hla-b",
+            "allele": "HLA-B*44:02",
+            "allele_slug": "hla_b_44_02",
+            "peptide": "EEFGRAFSF",
+            "pmhc_key": "hla_b_44_02_eefgrafsf",
+            "resolution": 1.6
+        },
+        "3kpm": {
+            "pdb_code": "3kpm",
+            "locus": "hla-b",
+            "allele": "HLA-B*44:02",
+            "allele_slug": "hla_b_44_02",
+            "peptide": "EEYLKAWTF",
+            "pmhc_key": "hla_b_44_02_eeylkawtf",
+            "resolution": 1.6
+        },
+        "7r7y": {
+            "pdb_code": "7r7y",
+            "locus": "hla-b",
+            "allele": "HLA-B*57:01",
+            "allele_slug": "hla_b_57_01",
+            "peptide": "QATQEVKNW",
+            "pmhc_key": "hla_b_57_01_qatqevknw",
+            "resolution": 1.6
+        },
+        "3gso": {
+            "pdb_code": "3gso",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "NLVPMVATV",
+            "pmhc_key": "hla_a_02_01_nlvpmvatv",
+            "resolution": 1.6
+        },
+        "5def": {
+            "pdb_code": "5def",
+            "locus": "hla-b",
+            "allele": "HLA-B*27:247",
+            "allele_slug": "hla_b_27_247",
+            "peptide": "RRKWRRWHL",
+            "pmhc_key": "hla_b_27_247_rrkwrrwhl",
+            "resolution": 1.6
+        },
+        "3pwn": {
+            "pdb_code": "3pwn",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "LLYGFVNYI",
+            "pmhc_key": "hla_a_02_01_llygfvnyi",
+            "resolution": 1.6
+        },
+        "2v2w": {
+            "pdb_code": "2v2w",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "SLYNTVATL",
+            "pmhc_key": "hla_a_02_01_slyntvatl",
+            "resolution": 1.6
+        },
+        "4qru": {
+            "pdb_code": "4qru",
+            "locus": "hla-b",
+            "allele": "HLA-B*08:01",
+            "allele_slug": "hla_b_08_01",
+            "peptide": "ELRRKMMYM",
+            "pmhc_key": "hla_b_08_01_elrrkmmym",
+            "resolution": 1.6
+        },
+        "3sko": {
+            "pdb_code": "3sko",
+            "locus": "hla-b",
+            "allele": "HLA-B*08:01",
+            "allele_slug": "hla_b_08_01",
+            "peptide": "FLRGRAYGL",
+            "pmhc_key": "hla_b_08_01_flrgraygl",
+            "resolution": 1.6
+        },
+        "7r7v": {
+            "pdb_code": "7r7v",
+            "locus": "hla-b",
+            "allele": "HLA-B*53:01",
+            "allele_slug": "hla_b_53_01",
+            "peptide": "QASQEVKNW",
+            "pmhc_key": "hla_b_53_01_qasqevknw",
+            "resolution": 1.6
+        },
+        "5wmo": {
+            "pdb_code": "5wmo",
+            "locus": "hla-b",
+            "allele": "HLA-B*07:02",
+            "allele_slug": "hla_b_07_02",
+            "peptide": "RPPIFIRRL",
+            "pmhc_key": "hla_b_07_02_rppifirrl",
+            "resolution": 1.62
+        },
+        "3v5h": {
+            "pdb_code": "3v5h",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "KVAEIVHFL",
+            "pmhc_key": "hla_a_02_01_kvaeivhfl",
+            "resolution": 1.63
+        },
+        "3kla": {
+            "pdb_code": "3kla",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "SLLMWITQL",
+            "pmhc_key": "hla_a_02_01_sllmwitql",
+            "resolution": 1.65
+        },
+        "3pwl": {
+            "pdb_code": "3pwl",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "LGYGFVNYI",
+            "pmhc_key": "hla_a_02_01_lgygfvnyi",
+            "resolution": 1.65
+        },
+        "5vwh": {
+            "pdb_code": "5vwh",
+            "locus": "hla-b",
+            "allele": "HLA-B*58:01",
+            "allele_slug": "hla_b_58_01",
+            "peptide": "LSSPVTKSW",
+            "pmhc_key": "hla_b_58_01_lsspvtksw",
+            "resolution": 1.65
+        },
+        "5nmk": {
+            "pdb_code": "5nmk",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "SLFNTIAVL",
+            "pmhc_key": "hla_a_02_01_slfntiavl",
+            "resolution": 1.66
+        },
+        "7p3d": {
+            "pdb_code": "7p3d",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "YLQPRTFLL",
+            "pmhc_key": "hla_a_02_01_ylqprtfll",
+            "resolution": 1.67
+        },
+        "3qfd": {
+            "pdb_code": "3qfd",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "AAGIGILTV",
+            "pmhc_key": "hla_a_02_01_aagigiltv",
+            "resolution": 1.68
+        },
+        "7mja": {
+            "pdb_code": "7mja",
+            "locus": "hla-a",
+            "allele": "HLA-A*24:02",
+            "allele_slug": "hla_a_24_02",
+            "peptide": "QYNPIRTTF",
+            "pmhc_key": "hla_a_24_02_qynpirttf",
+            "resolution": 1.69
+        },
+        "6y28": {
+            "pdb_code": "6y28",
+            "locus": "hla-b",
+            "allele": "HLA-B*27:05",
+            "allele_slug": "hla_b_27_05",
+            "peptide": "GRLNEPIKV",
+            "pmhc_key": "hla_b_27_05_grlnepikv",
+            "resolution": 1.69
+        },
+        "5eo0": {
+            "pdb_code": "5eo0",
+            "locus": "hla-b",
+            "allele": "HLA-B*07:02",
+            "allele_slug": "hla_b_07_02",
+            "peptide": "RPMTFKGAL",
+            "pmhc_key": "hla_b_07_02_rpmtfkgal",
+            "resolution": 1.7
+        },
+        "4qrq": {
+            "pdb_code": "4qrq",
+            "locus": "hla-b",
+            "allele": "HLA-B*08:01",
+            "allele_slug": "hla_b_08_01",
+            "peptide": "HSKKKCDEL",
+            "pmhc_key": "hla_b_08_01_hskkkcdel",
+            "resolution": 1.7
+        },
+        "2gtz": {
+            "pdb_code": "2gtz",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "ALGIGILTV",
+            "pmhc_key": "hla_a_02_01_algigiltv",
+            "resolution": 1.7
+        },
+        "5e00": {
+            "pdb_code": "5e00",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "GVWIRTPPA",
+            "pmhc_key": "hla_a_02_01_gvwirtppa",
+            "resolution": 1.7
+        },
+        "5txs": {
+            "pdb_code": "5txs",
+            "locus": "hla-b",
+            "allele": "HLA-B*15:01",
+            "allele_slug": "hla_b_15_01",
+            "peptide": "AQDIYRASY",
+            "pmhc_key": "hla_b_15_01_aqdiyrasy",
+            "resolution": 1.7
+        },
+        "5xos": {
+            "pdb_code": "5xos",
+            "locus": "hla-b",
+            "allele": "HLA-B*35:01",
+            "allele_slug": "hla_b_35_01",
+            "peptide": "IPLTEEAEL",
+            "pmhc_key": "hla_b_35_01_iplteeael",
+            "resolution": 1.7
+        },
+        "2git": {
+            "pdb_code": "2git",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "LLFGKPVYV",
+            "pmhc_key": "hla_a_02_01_llfgkpvyv",
+            "resolution": 1.7
+        },
+        "1n2r": {
+            "pdb_code": "1n2r",
+            "locus": "hla-b",
+            "allele": "HLA-B*44:03",
+            "allele_slug": "hla_b_44_03",
+            "peptide": "EEFGRAFSF",
+            "pmhc_key": "hla_b_44_03_eefgrafsf",
+            "resolution": 1.7
+        },
+        "1syv": {
+            "pdb_code": "1syv",
+            "locus": "hla-b",
+            "allele": "HLA-B*44:05",
+            "allele_slug": "hla_b_44_05",
+            "peptide": "EEFGRAFSF",
+            "pmhc_key": "hla_b_44_05_eefgrafsf",
+            "resolution": 1.7
+        },
+        "3mrd": {
+            "pdb_code": "3mrd",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "NLVPMGATV",
+            "pmhc_key": "hla_a_02_01_nlvpmgatv",
+            "resolution": 1.7
+        },
+        "3pwj": {
+            "pdb_code": "3pwj",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "LLYGFVNYV",
+            "pmhc_key": "hla_a_02_01_llygfvnyv",
+            "resolution": 1.7
+        },
+        "3l3i": {
+            "pdb_code": "3l3i",
+            "locus": "hla-b",
+            "allele": "HLA-B*44:02",
+            "allele_slug": "hla_b_44_02",
+            "peptide": "EEFGRAASF",
+            "pmhc_key": "hla_b_44_02_eefgraasf",
+            "resolution": 1.7
+        },
+        "7ejm": {
+            "pdb_code": "7ejm",
+            "locus": "hla-a",
+            "allele": "HLA-A*24:02",
+            "allele_slug": "hla_a_24_02",
+            "peptide": "TYIKWPWWV",
+            "pmhc_key": "hla_a_24_02_tyikwpwwv",
+            "resolution": 1.71
+        },
+        "5n6b": {
+            "pdb_code": "5n6b",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "LLWNGPMAV",
+            "pmhc_key": "hla_a_02_01_llwngpmav",
+            "resolution": 1.71
+        },
+        "1uxw": {
+            "pdb_code": "1uxw",
+            "locus": "hla-b",
+            "allele": "HLA-B*27:09",
+            "allele_slug": "hla_b_27_09",
+            "peptide": "RRRWRRLTV",
+            "pmhc_key": "hla_b_27_09_rrrwrrltv",
+            "resolution": 1.71
+        },
+        "5w6a": {
+            "pdb_code": "5w6a",
+            "locus": "hla-c",
+            "allele": "HLA-C*06:02",
+            "allele_slug": "hla_c_06_02",
+            "peptide": "ARTELYRSL",
+            "pmhc_key": "hla_c_06_02_artelyrsl",
+            "resolution": 1.74
+        },
+        "3d18": {
+            "pdb_code": "3d18",
+            "locus": "hla-b",
+            "allele": "HLA-B*27:09",
+            "allele_slug": "hla_b_27_09",
+            "peptide": "RRRWRRLTL",
+            "pmhc_key": "hla_b_27_09_rrrwrrltl",
+            "resolution": 1.74
+        },
+        "2cik": {
+            "pdb_code": "2cik",
+            "locus": "hla-b",
+            "allele": "HLA-B*35:01",
+            "allele_slug": "hla_b_35_01",
+            "peptide": "KPIVVLHGY",
+            "pmhc_key": "hla_b_35_01_kpivvlhgy",
+            "resolution": 1.75
+        },
+        "7mj9": {
+            "pdb_code": "7mj9",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "LLLPRLPPL",
+            "pmhc_key": "hla_a_02_01_lllprlppl",
+            "resolution": 1.75
+        },
+        "6vb1": {
+            "pdb_code": "6vb1",
+            "locus": "hla-b",
+            "allele": "HLA-B*15:02",
+            "allele_slug": "hla_b_15_02",
+            "peptide": "ELRAREEAY",
+            "pmhc_key": "hla_b_15_02_elrareeay",
+            "resolution": 1.75
+        },
+        "4u1s": {
+            "pdb_code": "4u1s",
+            "locus": "hla-b",
+            "allele": "HLA-B*81:01",
+            "allele_slug": "hla_b_81_01",
+            "peptide": "FPRPWLHGL",
+            "pmhc_key": "hla_b_81_01_fprpwlhgl",
+            "resolution": 1.76
+        },
+        "4u1n": {
+            "pdb_code": "4u1n",
+            "locus": "hla-b",
+            "allele": "HLA-B*42:02",
+            "allele_slug": "hla_b_42_02",
+            "peptide": "RPQVPLRPM",
+            "pmhc_key": "hla_b_42_02_rpqvplrpm",
+            "resolution": 1.77
+        },
+        "4i4w": {
+            "pdb_code": "4i4w",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "ILAKFLHRL",
+            "pmhc_key": "hla_a_02_01_ilakflhrl",
+            "resolution": 1.77
+        },
+        "5meo": {
+            "pdb_code": "5meo",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "ILGKFLHRL",
+            "pmhc_key": "hla_a_02_01_ilgkflhrl",
+            "resolution": 1.77
+        },
+        "6opd": {
+            "pdb_code": "6opd",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "ILNAMIVKI",
+            "pmhc_key": "hla_a_02_01_ilnamivki",
+            "resolution": 1.79
+        },
+        "1xr9": {
+            "pdb_code": "1xr9",
+            "locus": "hla-b",
+            "allele": "HLA-B*15:01",
+            "allele_slug": "hla_b_15_01",
+            "peptide": "ILGPPGSVY",
+            "pmhc_key": "hla_b_15_01_ilgppgsvy",
+            "resolution": 1.79
+        },
+        "4hx1": {
+            "pdb_code": "4hx1",
+            "locus": "hla-a",
+            "allele": "HLA-A*68:02",
+            "allele_slug": "hla_a_68_02",
+            "peptide": "SVYDFFVWL",
+            "pmhc_key": "hla_a_68_02_svydffvwl",
+            "resolution": 1.8
+        },
+        "1tvb": {
+            "pdb_code": "1tvb",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "ITDQVPFSV",
+            "pmhc_key": "hla_a_02_01_itdqvpfsv",
+            "resolution": 1.8
+        },
+        "3x12": {
+            "pdb_code": "3x12",
+            "locus": "hla-b",
+            "allele": "HLA-B*57:01",
+            "allele_slug": "hla_b_57_01",
+            "peptide": "LSSPVTKSF",
+            "pmhc_key": "hla_b_57_01_lsspvtksf",
+            "resolution": 1.8
+        },
+        "5vue": {
+            "pdb_code": "5vue",
+            "locus": "hla-b",
+            "allele": "HLA-B*57:01",
+            "allele_slug": "hla_b_57_01",
+            "peptide": "LTVQVARVW",
+            "pmhc_key": "hla_b_57_01_ltvqvarvw",
+            "resolution": 1.8
+        },
+        "3fqt": {
+            "pdb_code": "3fqt",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "GLLGSPVRA",
+            "pmhc_key": "hla_a_02_01_gllgspvra",
+            "resolution": 1.8
+        },
+        "3bp7": {
+            "pdb_code": "3bp7",
+            "locus": "hla-b",
+            "allele": "HLA-B*27:09",
+            "allele_slug": "hla_b_27_09",
+            "peptide": "IRAAPPPLF",
+            "pmhc_key": "hla_b_27_09_iraappplf",
+            "resolution": 1.8
+        },
+        "3lko": {
+            "pdb_code": "3lko",
+            "locus": "hla-b",
+            "allele": "HLA-B*35:01",
+            "allele_slug": "hla_b_35_01",
+            "peptide": "LPFDRTTIM",
+            "pmhc_key": "hla_b_35_01_lpfdrttim",
+            "resolution": 1.8
+        },
+        "6uzm": {
+            "pdb_code": "6uzm",
+            "locus": "hla-b",
+            "allele": "HLA-B*15:02",
+            "allele_slug": "hla_b_15_02",
+            "peptide": "HLASSGHSL",
+            "pmhc_key": "hla_b_15_02_hlassghsl",
+            "resolution": 1.8
+        },
+        "5vwf": {
+            "pdb_code": "5vwf",
+            "locus": "hla-b",
+            "allele": "HLA-B*57:03",
+            "allele_slug": "hla_b_57_03",
+            "peptide": "LTVQVARVY",
+            "pmhc_key": "hla_b_57_03_ltvqvarvy",
+            "resolution": 1.8
+        },
+        "3gsu": {
+            "pdb_code": "3gsu",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "NLVPTVATV",
+            "pmhc_key": "hla_a_02_01_nlvptvatv",
+            "resolution": 1.8
+        },
+        "1i7u": {
+            "pdb_code": "1i7u",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "ALWGFVPVL",
+            "pmhc_key": "hla_a_02_01_alwgfvpvl",
+            "resolution": 1.8
+        },
+        "3skm": {
+            "pdb_code": "3skm",
+            "locus": "hla-b",
+            "allele": "HLA-B*08:01",
+            "allele_slug": "hla_b_08_01",
+            "peptide": "FLRGRAYVL",
+            "pmhc_key": "hla_b_08_01_flrgrayvl",
+            "resolution": 1.8
+        },
+        "3lkp": {
+            "pdb_code": "3lkp",
+            "locus": "hla-b",
+            "allele": "HLA-B*35:01",
+            "allele_slug": "hla_b_35_01",
+            "peptide": "LPFDKSTIM",
+            "pmhc_key": "hla_b_35_01_lpfdkstim",
+            "resolution": 1.8
+        },
+        "5vwd": {
+            "pdb_code": "5vwd",
+            "locus": "hla-b",
+            "allele": "HLA-B*57:03",
+            "allele_slug": "hla_b_57_03",
+            "peptide": "LTVQVARVW",
+            "pmhc_key": "hla_b_57_03_ltvqvarvw",
+            "resolution": 1.8
+        },
+        "5iek": {
+            "pdb_code": "5iek",
+            "locus": "hla-b",
+            "allele": "HLA-B*40:02",
+            "allele_slug": "hla_b_40_02",
+            "peptide": "REFSKEPEL",
+            "pmhc_key": "hla_b_40_02_refskepel",
+            "resolution": 1.8
+        },
+        "3bo8": {
+            "pdb_code": "3bo8",
+            "locus": "hla-a",
+            "allele": "HLA-A*01:01",
+            "allele_slug": "hla_a_01_01",
+            "peptide": "EADPTGHSY",
+            "pmhc_key": "hla_a_01_01_eadptghsy",
+            "resolution": 1.8
+        },
+        "3l3d": {
+            "pdb_code": "3l3d",
+            "locus": "hla-b",
+            "allele": "HLA-B*44:02",
+            "allele_slug": "hla_b_44_02",
+            "peptide": "EEAGRAFSF",
+            "pmhc_key": "hla_b_44_02_eeagrafsf",
+            "resolution": 1.8
+        },
+        "3mrc": {
+            "pdb_code": "3mrc",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "NLVPMCATV",
+            "pmhc_key": "hla_a_02_01_nlvpmcatv",
+            "resolution": 1.8
+        },
+        "1duz": {
+            "pdb_code": "1duz",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "LLFGYPVYV",
+            "pmhc_key": "hla_a_02_01_llfgypvyv",
+            "resolution": 1.8
+        },
+        "1tvh": {
+            "pdb_code": "1tvh",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "IMDQVPFSV",
+            "pmhc_key": "hla_a_02_01_imdqvpfsv",
+            "resolution": 1.8
+        },
+        "3lkq": {
+            "pdb_code": "3lkq",
+            "locus": "hla-b",
+            "allele": "HLA-B*35:01",
+            "allele_slug": "hla_b_35_01",
+            "peptide": "LPFDKTTIM",
+            "pmhc_key": "hla_b_35_01_lpfdkttim",
+            "resolution": 1.8
+        },
+        "3x13": {
+            "pdb_code": "3x13",
+            "locus": "hla-b",
+            "allele": "HLA-B*08:01",
+            "allele_slug": "hla_b_08_01",
+            "peptide": "FLRGRAYGL",
+            "pmhc_key": "hla_b_08_01_flrgraygl",
+            "resolution": 1.8
+        },
+        "3gsw": {
+            "pdb_code": "3gsw",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "NLVPMVAAV",
+            "pmhc_key": "hla_a_02_01_nlvpmvaav",
+            "resolution": 1.81
+        },
+        "5wmn": {
+            "pdb_code": "5wmn",
+            "locus": "hla-b",
+            "allele": "HLA-B*07:02",
+            "allele_slug": "hla_b_07_02",
+            "peptide": "SPIVPSFDM",
+            "pmhc_key": "hla_b_07_02_spivpsfdm",
+            "resolution": 1.82
+        },
+        "5deg": {
+            "pdb_code": "5deg",
+            "locus": "hla-b",
+            "allele": "HLA-B*27:06",
+            "allele_slug": "hla_b_27_06",
+            "peptide": "RRKWRRWHL",
+            "pmhc_key": "hla_b_27_06_rrkwrrwhl",
+            "resolution": 1.83
+        },
+        "4nt6": {
+            "pdb_code": "4nt6",
+            "locus": "hla-c",
+            "allele": "HLA-C*08:01",
+            "allele_slug": "hla_c_08_01",
+            "peptide": "GILGFVFTL",
+            "pmhc_key": "hla_c_08_01_gilgfvftl",
+            "resolution": 1.84
+        },
+        "3kpq": {
+            "pdb_code": "3kpq",
+            "locus": "hla-b",
+            "allele": "HLA-B*44:05",
+            "allele_slug": "hla_b_44_05",
+            "peptide": "EEYLKAWTF",
+            "pmhc_key": "hla_b_44_05_eeylkawtf",
+            "resolution": 1.84
+        },
+        "5enw": {
+            "pdb_code": "5enw",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "GLKEGIPAL",
+            "pmhc_key": "hla_a_02_01_glkegipal",
+            "resolution": 1.85
+        },
+        "7sa2": {
+            "pdb_code": "7sa2",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "VVFLHVTYV",
+            "pmhc_key": "hla_a_02_01_vvflhvtyv",
+            "resolution": 1.85
+        },
+        "5eo1": {
+            "pdb_code": "5eo1",
+            "locus": "hla-b",
+            "allele": "HLA-B*07:02",
+            "allele_slug": "hla_b_07_02",
+            "peptide": "RPMTYKGAL",
+            "pmhc_key": "hla_b_07_02_rpmtykgal",
+            "resolution": 1.85
+        },
+        "3bp4": {
+            "pdb_code": "3bp4",
+            "locus": "hla-b",
+            "allele": "HLA-B*27:05",
+            "allele_slug": "hla_b_27_05",
+            "peptide": "IRAAPPPLF",
+            "pmhc_key": "hla_b_27_05_iraappplf",
+            "resolution": 1.85
+        },
+        "5fa3": {
+            "pdb_code": "5fa3",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "GLLPELPAV",
+            "pmhc_key": "hla_a_02_01_gllpelpav",
+            "resolution": 1.86
+        },
+        "3bxn": {
+            "pdb_code": "3bxn",
+            "locus": "hla-b",
+            "allele": "HLA-B*14:02",
+            "allele_slug": "hla_b_14_02",
+            "peptide": "IRAAPPPLF",
+            "pmhc_key": "hla_b_14_02_iraappplf",
+            "resolution": 1.86
+        },
+        "3mrj": {
+            "pdb_code": "3mrj",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "CINGMCWTV",
+            "pmhc_key": "hla_a_02_01_cingmcwtv",
+            "resolution": 1.87
+        },
+        "3c9n": {
+            "pdb_code": "3c9n",
+            "locus": "hla-b",
+            "allele": "HLA-B*15:01",
+            "allele_slug": "hla_b_15_01",
+            "peptide": "VQQESSFVM",
+            "pmhc_key": "hla_b_15_01_vqqessfvm",
+            "resolution": 1.87
+        },
+        "3h7b": {
+            "pdb_code": "3h7b",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "MLWGYLQYV",
+            "pmhc_key": "hla_a_02_01_mlwgylqyv",
+            "resolution": 1.88
+        },
+        "6uli": {
+            "pdb_code": "6uli",
+            "locus": "hla-c",
+            "allele": "HLA-C*08:02",
+            "allele_slug": "hla_c_08_02",
+            "peptide": "GADGVGKSA",
+            "pmhc_key": "hla_c_08_02_gadgvgksa",
+            "resolution": 1.88
+        },
+        "5mer": {
+            "pdb_code": "5mer",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "ILAKFLHEL",
+            "pmhc_key": "hla_a_02_01_ilakflhel",
+            "resolution": 1.88
+        },
+        "3myj": {
+            "pdb_code": "3myj",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "YMFPNAPYL",
+            "pmhc_key": "hla_a_02_01_ymfpnapyl",
+            "resolution": 1.89
+        },
+        "7ejl": {
+            "pdb_code": "7ejl",
+            "locus": "hla-a",
+            "allele": "HLA-A*24:02",
+            "allele_slug": "hla_a_24_02",
+            "peptide": "QYIKWPWYI",
+            "pmhc_key": "hla_a_24_02_qyikwpwyi",
+            "resolution": 1.89
+        },
+        "5vuf": {
+            "pdb_code": "5vuf",
+            "locus": "hla-b",
+            "allele": "HLA-B*57:01",
+            "allele_slug": "hla_b_57_01",
+            "peptide": "LTVQVARVY",
+            "pmhc_key": "hla_b_57_01_ltvqvarvy",
+            "resolution": 1.9
+        },
+        "3rew": {
+            "pdb_code": "3rew",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "CLGGLLTMV",
+            "pmhc_key": "hla_a_02_01_clgglltmv",
+            "resolution": 1.9
+        },
+        "1m05": {
+            "pdb_code": "1m05",
+            "locus": "hla-b",
+            "allele": "HLA-B*08:01",
+            "allele_slug": "hla_b_08_01",
+            "peptide": "FLRGRAYGL",
+            "pmhc_key": "hla_b_08_01_flrgraygl",
+            "resolution": 1.9
+        },
+        "3ft4": {
+            "pdb_code": "3ft4",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "VLRDDLLEA",
+            "pmhc_key": "hla_a_02_01_vlrddllea",
+            "resolution": 1.9
+        },
+        "5hhp": {
+            "pdb_code": "5hhp",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "GILEFVFTL",
+            "pmhc_key": "hla_a_02_01_gilefvftl",
+            "resolution": 1.9
+        },
+        "2guo": {
+            "pdb_code": "2guo",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "AAGIGILTV",
+            "pmhc_key": "hla_a_02_01_aagigiltv",
+            "resolution": 1.9
+        },
+        "6d2t": {
+            "pdb_code": "6d2t",
+            "locus": "hla-b",
+            "allele": "HLA-B*57:01",
+            "allele_slug": "hla_b_57_01",
+            "peptide": "LALLTGVRW",
+            "pmhc_key": "hla_b_57_01_lalltgvrw",
+            "resolution": 1.9
+        },
+        "6vb0": {
+            "pdb_code": "6vb0",
+            "locus": "hla-b",
+            "allele": "HLA-B*15:02",
+            "allele_slug": "hla_b_15_02",
+            "peptide": "ELRAREESY",
+            "pmhc_key": "hla_b_15_02_elrareesy",
+            "resolution": 1.9
+        },
+        "3lks": {
+            "pdb_code": "3lks",
+            "locus": "hla-b",
+            "allele": "HLA-B*35:01",
+            "allele_slug": "hla_b_35_01",
+            "peptide": "LPFEKSTVM",
+            "pmhc_key": "hla_b_35_01_lpfekstvm",
+            "resolution": 1.9
+        },
+        "7u21": {
+            "pdb_code": "7u21",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "AVGSYVYSV",
+            "pmhc_key": "hla_a_02_01_avgsyvysv",
+            "resolution": 1.9
+        },
+        "6uzs": {
+            "pdb_code": "6uzs",
+            "locus": "hla-b",
+            "allele": "HLA-B*15:01",
+            "allele_slug": "hla_b_15_01",
+            "peptide": "HLASSGHSY",
+            "pmhc_key": "hla_b_15_01_hlassghsy",
+            "resolution": 1.9
+        },
+        "3kpp": {
+            "pdb_code": "3kpp",
+            "locus": "hla-b",
+            "allele": "HLA-B*44:05",
+            "allele_slug": "hla_b_44_05",
+            "peptide": "EEYLQAFTY",
+            "pmhc_key": "hla_b_44_05_eeylqafty",
+            "resolution": 1.9
+        },
+        "4nny": {
+            "pdb_code": "4nny",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "RQASLSISV",
+            "pmhc_key": "hla_a_02_01_rqaslsisv",
+            "resolution": 1.9
+        },
+        "6pte": {
+            "pdb_code": "6pte",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "ILNAMITKI",
+            "pmhc_key": "hla_a_02_01_ilnamitki",
+            "resolution": 1.9
+        },
+        "1t1z": {
+            "pdb_code": "1t1z",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "ALYNTAAAL",
+            "pmhc_key": "hla_a_02_01_alyntaaal",
+            "resolution": 1.9
+        },
+        "6jtp": {
+            "pdb_code": "6jtp",
+            "locus": "hla-c",
+            "allele": "HLA-C*08:02",
+            "allele_slug": "hla_c_08_02",
+            "peptide": "GADGVGKSA",
+            "pmhc_key": "hla_c_08_02_gadgvgksa",
+            "resolution": 1.9
+        },
+        "2h6p": {
+            "pdb_code": "2h6p",
+            "locus": "hla-b",
+            "allele": "HLA-B*35:01",
+            "allele_slug": "hla_b_35_01",
+            "peptide": "KPIVVLHGY",
+            "pmhc_key": "hla_b_35_01_kpivvlhgy",
+            "resolution": 1.9
+        },
+        "3gsv": {
+            "pdb_code": "3gsv",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "NLVPQVATV",
+            "pmhc_key": "hla_a_02_01_nlvpqvatv",
+            "resolution": 1.9
+        },
+        "7mkb": {
+            "pdb_code": "7mkb",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "YLQPRTFLL",
+            "pmhc_key": "hla_a_02_01_ylqprtfll",
+            "resolution": 1.9
+        },
+        "7lfz": {
+            "pdb_code": "7lfz",
+            "locus": "hla-b",
+            "allele": "HLA-B*07:02",
+            "allele_slug": "hla_b_07_02",
+            "peptide": "IPRRNVATL",
+            "pmhc_key": "hla_b_07_02_iprrnvatl",
+            "resolution": 1.9
+        },
+        "5ib1": {
+            "pdb_code": "5ib1",
+            "locus": "hla-b",
+            "allele": "HLA-B*27:05",
+            "allele_slug": "hla_b_27_05",
+            "peptide": "RRKWRRWHL",
+            "pmhc_key": "hla_b_27_05_rrkwrrwhl",
+            "resolution": 1.91
+        },
+        "5ib3": {
+            "pdb_code": "5ib3",
+            "locus": "hla-b",
+            "allele": "HLA-B*27:05",
+            "allele_slug": "hla_b_27_05",
+            "peptide": "RRKWRRWHL",
+            "pmhc_key": "hla_b_27_05_rrkwrrwhl",
+            "resolution": 1.91
+        },
+        "4u1i": {
+            "pdb_code": "4u1i",
+            "locus": "hla-b",
+            "allele": "HLA-B*81:01",
+            "allele_slug": "hla_b_81_01",
+            "peptide": "TPQDLNTML",
+            "pmhc_key": "hla_b_81_01_tpqdlntml",
+            "resolution": 1.92
+        },
+        "3mr9": {
+            "pdb_code": "3mr9",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "NLVPAVATV",
+            "pmhc_key": "hla_a_02_01_nlvpavatv",
+            "resolution": 1.93
+        },
+        "3fqw": {
+            "pdb_code": "3fqw",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "RVASPTSGV",
+            "pmhc_key": "hla_a_02_01_rvasptsgv",
+            "resolution": 1.93
+        },
+        "3lv3": {
+            "pdb_code": "3lv3",
+            "locus": "hla-b",
+            "allele": "HLA-B*27:05",
+            "allele_slug": "hla_b_27_05",
+            "peptide": "SRRWRRWNR",
+            "pmhc_key": "hla_b_27_05_srrwrrwnr",
+            "resolution": 1.94
+        },
+        "3gsr": {
+            "pdb_code": "3gsr",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "NLVPVVATV",
+            "pmhc_key": "hla_a_02_01_nlvpvvatv",
+            "resolution": 1.95
+        },
+        "2av1": {
+            "pdb_code": "2av1",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "LLFGYPVYV",
+            "pmhc_key": "hla_a_02_01_llfgypvyv",
+            "resolution": 1.95
+        },
+        "7mj6": {
+            "pdb_code": "7mj6",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "LLLPLLPPL",
+            "pmhc_key": "hla_a_02_01_lllpllppl",
+            "resolution": 1.95
+        },
+        "5ib4": {
+            "pdb_code": "5ib4",
+            "locus": "hla-b",
+            "allele": "HLA-B*27:05",
+            "allele_slug": "hla_b_27_05",
+            "peptide": "RRKWRRWHL",
+            "pmhc_key": "hla_b_27_05_rrkwrrwhl",
+            "resolution": 1.95
+        },
+        "7uc5": {
+            "pdb_code": "7uc5",
+            "locus": "hla-a",
+            "allele": "HLA-A*03:01",
+            "allele_slug": "hla_a_03_01",
+            "peptide": "ILRGSVAHK",
+            "pmhc_key": "hla_a_03_01_ilrgsvahk",
+            "resolution": 1.95
+        },
+        "3ft3": {
+            "pdb_code": "3ft3",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "VLHDDLLEA",
+            "pmhc_key": "hla_a_02_01_vlhddllea",
+            "resolution": 1.95
+        },
+        "3kpl": {
+            "pdb_code": "3kpl",
+            "locus": "hla-b",
+            "allele": "HLA-B*44:02",
+            "allele_slug": "hla_b_44_02",
+            "peptide": "EEYLQAFTY",
+            "pmhc_key": "hla_b_44_02_eeylqafty",
+            "resolution": 1.96
+        },
+        "7l1c": {
+            "pdb_code": "7l1c",
+            "locus": "hla-a",
+            "allele": "HLA-A*03:01",
+            "allele_slug": "hla_a_03_01",
+            "peptide": "ALHGGWTTK",
+            "pmhc_key": "hla_a_03_01_alhggwttk",
+            "resolution": 1.96
+        },
+        "5eu3": {
+            "pdb_code": "5eu3",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "YLEPGPVTA",
+            "pmhc_key": "hla_a_02_01_ylepgpvta",
+            "resolution": 1.97
+        },
+        "7lgt": {
+            "pdb_code": "7lgt",
+            "locus": "hla-b",
+            "allele": "HLA-B*07:02",
+            "allele_slug": "hla_b_07_02",
+            "peptide": "SPKLHFYYL",
+            "pmhc_key": "hla_b_07_02_spklhfyyl",
+            "resolution": 1.97
+        },
+        "4o2e": {
+            "pdb_code": "4o2e",
+            "locus": "hla-b",
+            "allele": "HLA-B*39:01",
+            "allele_slug": "hla_b_39_01",
+            "peptide": "SHVAVENAL",
+            "pmhc_key": "hla_b_39_01_shvavenal",
+            "resolution": 1.98
+        },
+        "5vwj": {
+            "pdb_code": "5vwj",
+            "locus": "hla-b",
+            "allele": "HLA-B*58:01",
+            "allele_slug": "hla_b_58_01",
+            "peptide": "LTVQVARVW",
+            "pmhc_key": "hla_b_58_01_ltvqvarvw",
+            "resolution": 2.0
+        },
+        "3kpn": {
+            "pdb_code": "3kpn",
+            "locus": "hla-b",
+            "allele": "HLA-B*44:03",
+            "allele_slug": "hla_b_44_03",
+            "peptide": "EEYLQAFTY",
+            "pmhc_key": "hla_b_44_03_eeylqafty",
+            "resolution": 2.0
+        },
+        "4k7f": {
+            "pdb_code": "4k7f",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "VCWGELMNL",
+            "pmhc_key": "hla_a_02_01_vcwgelmnl",
+            "resolution": 2.0
+        },
+        "3lkr": {
+            "pdb_code": "3lkr",
+            "locus": "hla-b",
+            "allele": "HLA-B*35:01",
+            "allele_slug": "hla_b_35_01",
+            "peptide": "LPFERATVM",
+            "pmhc_key": "hla_b_35_01_lpferatvm",
+            "resolution": 2.0
+        },
+        "6vb3": {
+            "pdb_code": "6vb3",
+            "locus": "hla-b",
+            "allele": "HLA-B*15:01",
+            "allele_slug": "hla_b_15_01",
+            "peptide": "TVAASGHSY",
+            "pmhc_key": "hla_b_15_01_tvaasghsy",
+            "resolution": 2.0
+        },
+        "7nui": {
+            "pdb_code": "7nui",
+            "locus": "hla-b",
+            "allele": "HLA-B*08:01",
+            "allele_slug": "hla_b_08_01",
+            "peptide": "ELRSRYWAI",
+            "pmhc_key": "hla_b_08_01_elrsrywai",
+            "resolution": 2.0
+        },
+        "5vvp": {
+            "pdb_code": "5vvp",
+            "locus": "hla-b",
+            "allele": "HLA-B*57:03",
+            "allele_slug": "hla_b_57_03",
+            "peptide": "LSSPVTKSW",
+            "pmhc_key": "hla_b_57_03_lsspvtksw",
+            "resolution": 2.0
+        },
+        "3upr": {
+            "pdb_code": "3upr",
+            "locus": "hla-b",
+            "allele": "HLA-B*57:01",
+            "allele_slug": "hla_b_57_01",
+            "peptide": "HSITYLLPV",
+            "pmhc_key": "hla_b_57_01_hsityllpv",
+            "resolution": 2.0
+        },
+        "4nqx": {
+            "pdb_code": "4nqx",
+            "locus": "hla-a",
+            "allele": "HLA-A*01:01",
+            "allele_slug": "hla_a_01_01",
+            "peptide": "CTELKLNDY",
+            "pmhc_key": "hla_a_01_01_ctelklndy",
+            "resolution": 2.0
+        },
+        "3x14": {
+            "pdb_code": "3x14",
+            "locus": "hla-b",
+            "allele": "HLA-B*08:01",
+            "allele_slug": "hla_b_08_01",
+            "peptide": "FLRGRAYGL",
+            "pmhc_key": "hla_b_08_01_flrgraygl",
+            "resolution": 2.0
+        },
+        "5wsh": {
+            "pdb_code": "5wsh",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "GVWIRTPTA",
+            "pmhc_key": "hla_a_02_01_gvwirtpta",
+            "resolution": 2.0
+        },
+        "3hpj": {
+            "pdb_code": "3hpj",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "RMFPNAPYL",
+            "pmhc_key": "hla_a_02_01_rmfpnapyl",
+            "resolution": 2.0
+        },
+        "6j1v": {
+            "pdb_code": "6j1v",
+            "locus": "hla-a",
+            "allele": "HLA-A*30:03",
+            "allele_slug": "hla_a_30_03",
+            "peptide": "AIFQSSMTK",
+            "pmhc_key": "hla_a_30_03_aifqssmtk",
+            "resolution": 2.0
+        },
+        "1t1y": {
+            "pdb_code": "1t1y",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "SLYNVVATL",
+            "pmhc_key": "hla_a_02_01_slynvvatl",
+            "resolution": 2.0
+        },
+        "3h9h": {
+            "pdb_code": "3h9h",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "MLWGYLQYV",
+            "pmhc_key": "hla_a_02_01_mlwgylqyv",
+            "resolution": 2.0
+        },
+        "7p3e": {
+            "pdb_code": "7p3e",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "YLQLRTFLL",
+            "pmhc_key": "hla_a_02_01_ylqlrtfll",
+            "resolution": 2.0
+        },
+        "5vud": {
+            "pdb_code": "5vud",
+            "locus": "hla-b",
+            "allele": "HLA-B*57:01",
+            "allele_slug": "hla_b_57_01",
+            "peptide": "LSSPVTKSW",
+            "pmhc_key": "hla_b_57_01_lsspvtksw",
+            "resolution": 2.0
+        },
+        "3lkn": {
+            "pdb_code": "3lkn",
+            "locus": "hla-b",
+            "allele": "HLA-B*35:01",
+            "allele_slug": "hla_b_35_01",
+            "peptide": "LPFERATIM",
+            "pmhc_key": "hla_b_35_01_lpferatim",
+            "resolution": 2.0
+        },
+        "3rl1": {
+            "pdb_code": "3rl1",
+            "locus": "hla-a",
+            "allele": "HLA-A*03:01",
+            "allele_slug": "hla_a_03_01",
+            "peptide": "AIFQSSMTK",
+            "pmhc_key": "hla_a_03_01_aifqssmtk",
+            "resolution": 2.0
+        },
+        "3v5d": {
+            "pdb_code": "3v5d",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "KVAELVHFL",
+            "pmhc_key": "hla_a_02_01_kvaelvhfl",
+            "resolution": 2.0
+        },
+        "5u98": {
+            "pdb_code": "5u98",
+            "locus": "hla-b",
+            "allele": "HLA-B*57:01",
+            "allele_slug": "hla_b_57_01",
+            "peptide": "VTTDIQVKV",
+            "pmhc_key": "hla_b_57_01_vttdiqvkv",
+            "resolution": 2.0
+        },
+        "6z9v": {
+            "pdb_code": "6z9v",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "IIGWMWIPV",
+            "pmhc_key": "hla_a_02_01_iigwmwipv",
+            "resolution": 2.01
+        },
+        "5hhn": {
+            "pdb_code": "5hhn",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "GILGLVFTL",
+            "pmhc_key": "hla_a_02_01_gilglvftl",
+            "resolution": 2.03
+        },
+        "7l1b": {
+            "pdb_code": "7l1b",
+            "locus": "hla-a",
+            "allele": "HLA-A*03:01",
+            "allele_slug": "hla_a_03_01",
+            "peptide": "AHHGGWTTK",
+            "pmhc_key": "hla_a_03_01_ahhggwttk",
+            "resolution": 2.04
+        },
+        "7rtd": {
+            "pdb_code": "7rtd",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "YLQPRTFLL",
+            "pmhc_key": "hla_a_02_01_ylqprtfll",
+            "resolution": 2.05
+        },
+        "2av7": {
+            "pdb_code": "2av7",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "LLFGYPVYV",
+            "pmhc_key": "hla_a_02_01_llfgypvyv",
+            "resolution": 2.05
+        },
+        "4u1l": {
+            "pdb_code": "4u1l",
+            "locus": "hla-b",
+            "allele": "HLA-B*81:01",
+            "allele_slug": "hla_b_81_01",
+            "peptide": "RPQVPLRPM",
+            "pmhc_key": "hla_b_81_01_rpqvplrpm",
+            "resolution": 2.06
+        },
+        "7n1a": {
+            "pdb_code": "7n1a",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "YLQPRTFLL",
+            "pmhc_key": "hla_a_02_01_ylqprtfll",
+            "resolution": 2.06
+        },
+        "6uzp": {
+            "pdb_code": "6uzp",
+            "locus": "hla-b",
+            "allele": "HLA-B*15:01",
+            "allele_slug": "hla_b_15_01",
+            "peptide": "HLASSGHSL",
+            "pmhc_key": "hla_b_15_01_hlassghsl",
+            "resolution": 2.08
+        },
+        "4u1k": {
+            "pdb_code": "4u1k",
+            "locus": "hla-b",
+            "allele": "HLA-B*07:02",
+            "allele_slug": "hla_b_07_02",
+            "peptide": "RPQVPLRPM",
+            "pmhc_key": "hla_b_07_02_rpqvplrpm",
+            "resolution": 2.09
+        },
+        "1hsa": {
+            "pdb_code": "1hsa",
+            "locus": "hla-b",
+            "allele": "HLA-B*27:05",
+            "allele_slug": "hla_b_27_05",
+            "peptide": "ARAAAAAAA",
+            "pmhc_key": "hla_b_27_05_araaaaaaa",
+            "resolution": 2.1
+        },
+        "6vb7": {
+            "pdb_code": "6vb7",
+            "locus": "hla-b",
+            "allele": "HLA-B*15:02",
+            "allele_slug": "hla_b_15_02",
+            "peptide": "TVRASGHSY",
+            "pmhc_key": "hla_b_15_02_tvrasghsy",
+            "resolution": 2.1
+        },
+        "3mri": {
+            "pdb_code": "3mri",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "CINMWCWTV",
+            "pmhc_key": "hla_a_02_01_cinmwcwtv",
+            "resolution": 2.1
+        },
+        "3gsx": {
+            "pdb_code": "3gsx",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "NLVPMVAVV",
+            "pmhc_key": "hla_a_02_01_nlvpmvavv",
+            "resolution": 2.1
+        },
+        "3ixa": {
+            "pdb_code": "3ixa",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "LLFGYPVYV",
+            "pmhc_key": "hla_a_02_01_llfgypvyv",
+            "resolution": 2.1
+        },
+        "3l3g": {
+            "pdb_code": "3l3g",
+            "locus": "hla-b",
+            "allele": "HLA-B*44:02",
+            "allele_slug": "hla_b_44_02",
+            "peptide": "EEFGAAFSF",
+            "pmhc_key": "hla_b_44_02_eefgaafsf",
+            "resolution": 2.1
+        },
+        "4no5": {
+            "pdb_code": "4no5",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "RQISQDVKL",
+            "pmhc_key": "hla_a_02_01_rqisqdvkl",
+            "resolution": 2.1
+        },
+        "5hhq": {
+            "pdb_code": "5hhq",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "GIWGFVFTL",
+            "pmhc_key": "hla_a_02_01_giwgfvftl",
+            "resolution": 2.1
+        },
+        "2x4u": {
+            "pdb_code": "2x4u",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "ILKEPVHGV",
+            "pmhc_key": "hla_a_02_01_ilkepvhgv",
+            "resolution": 2.1
+        },
+        "1jge": {
+            "pdb_code": "1jge",
+            "locus": "hla-b",
+            "allele": "HLA-B*27:05",
+            "allele_slug": "hla_b_27_05",
+            "peptide": "GRFAAAIAK",
+            "pmhc_key": "hla_b_27_05_grfaaaiak",
+            "resolution": 2.1
+        },
+        "7r7x": {
+            "pdb_code": "7r7x",
+            "locus": "hla-b",
+            "allele": "HLA-B*57:01",
+            "allele_slug": "hla_b_57_01",
+            "peptide": "QASQEVKNW",
+            "pmhc_key": "hla_b_57_01_qasqevknw",
+            "resolution": 2.1
+        },
+        "2bst": {
+            "pdb_code": "2bst",
+            "locus": "hla-b",
+            "allele": "HLA-B*27:05",
+            "allele_slug": "hla_b_27_05",
+            "peptide": "SRYWAIRTR",
+            "pmhc_key": "hla_b_27_05_srywairtr",
+            "resolution": 2.1
+        },
+        "7ejn": {
+            "pdb_code": "7ejn",
+            "locus": "hla-a",
+            "allele": "HLA-A*24:02",
+            "allele_slug": "hla_a_24_02",
+            "peptide": "MYVKWPWYV",
+            "pmhc_key": "hla_a_24_02_myvkwpwyv",
+            "resolution": 2.11
+        },
+        "1w0w": {
+            "pdb_code": "1w0w",
+            "locus": "hla-b",
+            "allele": "HLA-B*27:09",
+            "allele_slug": "hla_b_27_09",
+            "peptide": "RRLPIFSRL",
+            "pmhc_key": "hla_b_27_09_rrlpifsrl",
+            "resolution": 2.11
+        },
+        "6ssa": {
+            "pdb_code": "6ssa",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "LLWNGPMQV",
+            "pmhc_key": "hla_a_02_01_llwngpmqv",
+            "resolution": 2.11
+        },
+        "3gsq": {
+            "pdb_code": "3gsq",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "NLVPSVATV",
+            "pmhc_key": "hla_a_02_01_nlvpsvatv",
+            "resolution": 2.12
+        },
+        "5eu4": {
+            "pdb_code": "5eu4",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "YLAPGPVTA",
+            "pmhc_key": "hla_a_02_01_ylapgpvta",
+            "resolution": 2.12
+        },
+        "5ind": {
+            "pdb_code": "5ind",
+            "locus": "hla-b",
+            "allele": "HLA-B*58:11",
+            "allele_slug": "hla_b_58_11",
+            "peptide": "QASQDVKNW",
+            "pmhc_key": "hla_b_58_11_qasqdvknw",
+            "resolution": 2.13
+        },
+        "6vb6": {
+            "pdb_code": "6vb6",
+            "locus": "hla-b",
+            "allele": "HLA-B*15:02",
+            "allele_slug": "hla_b_15_02",
+            "peptide": "TVRASGHSY",
+            "pmhc_key": "hla_b_15_02_tvrasghsy",
+            "resolution": 2.15
+        },
+        "6vb5": {
+            "pdb_code": "6vb5",
+            "locus": "hla-b",
+            "allele": "HLA-B*15:02",
+            "allele_slug": "hla_b_15_02",
+            "peptide": "TVRASGHSY",
+            "pmhc_key": "hla_b_15_02_tvrasghsy",
+            "resolution": 2.15
+        },
+        "7kgo": {
+            "pdb_code": "7kgo",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "ILLNKHIDA",
+            "pmhc_key": "hla_a_02_01_illnkhida",
+            "resolution": 2.15
+        },
+        "3x11": {
+            "pdb_code": "3x11",
+            "locus": "hla-b",
+            "allele": "HLA-B*57:01",
+            "allele_slug": "hla_b_57_01",
+            "peptide": "LSSPVTKSF",
+            "pmhc_key": "hla_b_57_01_lsspvtksf",
+            "resolution": 2.15
+        },
+        "6ptb": {
+            "pdb_code": "6ptb",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "ILNAMIAKI",
+            "pmhc_key": "hla_a_02_01_ilnamiaki",
+            "resolution": 2.15
+        },
+        "1jht": {
+            "pdb_code": "1jht",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "ALGIGILTV",
+            "pmhc_key": "hla_a_02_01_algigiltv",
+            "resolution": 2.15
+        },
+        "6xqa": {
+            "pdb_code": "6xqa",
+            "locus": "hla-a",
+            "allele": "HLA-A*24:02",
+            "allele_slug": "hla_a_24_02",
+            "peptide": "TYQWVLKNL",
+            "pmhc_key": "hla_a_24_02_tyqwvlknl",
+            "resolution": 2.16
+        },
+        "1t21": {
+            "pdb_code": "1t21",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "SLYNTVATL",
+            "pmhc_key": "hla_a_02_01_slyntvatl",
+            "resolution": 2.19
+        },
+        "6o9b": {
+            "pdb_code": "6o9b",
+            "locus": "hla-a",
+            "allele": "HLA-A*03:01",
+            "allele_slug": "hla_a_03_01",
+            "peptide": "TTAPSLSGK",
+            "pmhc_key": "hla_a_03_01_ttapslsgk",
+            "resolution": 2.2
+        },
+        "1e27": {
+            "pdb_code": "1e27",
+            "locus": "hla-b",
+            "allele": "HLA-B*51:01",
+            "allele_slug": "hla_b_51_01",
+            "peptide": "LPPVVAKEI",
+            "pmhc_key": "hla_b_51_01_lppvvakei",
+            "resolution": 2.2
+        },
+        "7mle": {
+            "pdb_code": "7mle",
+            "locus": "hla-a",
+            "allele": "HLA-A*03:01",
+            "allele_slug": "hla_a_03_01",
+            "peptide": "VVRPSVASK",
+            "pmhc_key": "hla_a_03_01_vvrpsvask",
+            "resolution": 2.2
+        },
+        "1qew": {
+            "pdb_code": "1qew",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "FLWGPRALV",
+            "pmhc_key": "hla_a_02_01_flwgpralv",
+            "resolution": 2.2
+        },
+        "1t22": {
+            "pdb_code": "1t22",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "SLYNTVATL",
+            "pmhc_key": "hla_a_02_01_slyntvatl",
+            "resolution": 2.2
+        },
+        "1i1y": {
+            "pdb_code": "1i1y",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "YLKEPVHGV",
+            "pmhc_key": "hla_a_02_01_ylkepvhgv",
+            "resolution": 2.2
+        },
+        "1s8d": {
+            "pdb_code": "1s8d",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "SLANTVATL",
+            "pmhc_key": "hla_a_02_01_slantvatl",
+            "resolution": 2.2
+        },
+        "1t20": {
+            "pdb_code": "1t20",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "SLYNTIATL",
+            "pmhc_key": "hla_a_02_01_slyntiatl",
+            "resolution": 2.2
+        },
+        "1t1x": {
+            "pdb_code": "1t1x",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "SLYLTVATL",
+            "pmhc_key": "hla_a_02_01_slyltvatl",
+            "resolution": 2.2
+        },
+        "1i7r": {
+            "pdb_code": "1i7r",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "FAPGFFPYL",
+            "pmhc_key": "hla_a_02_01_fapgffpyl",
+            "resolution": 2.2
+        },
+        "1t1w": {
+            "pdb_code": "1t1w",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "SLFNTIAVL",
+            "pmhc_key": "hla_a_02_01_slfntiavl",
+            "resolution": 2.2
+        },
+        "1of2": {
+            "pdb_code": "1of2",
+            "locus": "hla-b",
+            "allele": "HLA-B*27:09",
+            "allele_slug": "hla_b_27_09",
+            "peptide": "RRKWRRWHL",
+            "pmhc_key": "hla_b_27_09_rrkwrrwhl",
+            "resolution": 2.2
+        },
+        "1s9w": {
+            "pdb_code": "1s9w",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "SLLMWITQC",
+            "pmhc_key": "hla_a_02_01_sllmwitqc",
+            "resolution": 2.2
+        },
+        "6uzn": {
+            "pdb_code": "6uzn",
+            "locus": "hla-b",
+            "allele": "HLA-B*15:02",
+            "allele_slug": "hla_b_15_02",
+            "peptide": "TVRASGHSY",
+            "pmhc_key": "hla_b_15_02_tvrasghsy",
+            "resolution": 2.22
+        },
+        "6ss8": {
+            "pdb_code": "6ss8",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "LLWNGPIAV",
+            "pmhc_key": "hla_a_02_01_llwngpiav",
+            "resolution": 2.24
+        },
+        "6ujo": {
+            "pdb_code": "6ujo",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:06",
+            "allele_slug": "hla_a_02_06",
+            "peptide": "KQWLVWLFL",
+            "pmhc_key": "hla_a_02_06_kqwlvwlfl",
+            "resolution": 2.25
+        },
+        "7nmd": {
+            "pdb_code": "7nmd",
+            "locus": "hla-a",
+            "allele": "HLA-A*24:02",
+            "allele_slug": "hla_a_24_02",
+            "peptide": "QLPRLFPLL",
+            "pmhc_key": "hla_a_24_02_qlprlfpll",
+            "resolution": 2.25
+        },
+        "1eey": {
+            "pdb_code": "1eey",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "ILSALVGIV",
+            "pmhc_key": "hla_a_02_01_ilsalvgiv",
+            "resolution": 2.25
+        },
+        "5meq": {
+            "pdb_code": "5meq",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "ILAKFLHTL",
+            "pmhc_key": "hla_a_02_01_ilakflhtl",
+            "resolution": 2.27
+        },
+        "1w0v": {
+            "pdb_code": "1w0v",
+            "locus": "hla-b",
+            "allele": "HLA-B*27:05",
+            "allele_slug": "hla_b_27_05",
+            "peptide": "RRLPIFSRL",
+            "pmhc_key": "hla_b_27_05_rrlpifsrl",
+            "resolution": 2.27
+        },
+        "3kpo": {
+            "pdb_code": "3kpo",
+            "locus": "hla-b",
+            "allele": "HLA-B*44:03",
+            "allele_slug": "hla_b_44_03",
+            "peptide": "EEYLKAWTF",
+            "pmhc_key": "hla_b_44_03_eeylkawtf",
+            "resolution": 2.3
+        },
+        "7lg0": {
+            "pdb_code": "7lg0",
+            "locus": "hla-b",
+            "allele": "HLA-B*07:02",
+            "allele_slug": "hla_b_07_02",
+            "peptide": "SPRWYFYYL",
+            "pmhc_key": "hla_b_07_02_sprwyfyyl",
+            "resolution": 2.3
+        },
+        "1xr8": {
+            "pdb_code": "1xr8",
+            "locus": "hla-b",
+            "allele": "HLA-B*15:01",
+            "allele_slug": "hla_b_15_01",
+            "peptide": "LEKARGSTY",
+            "pmhc_key": "hla_b_15_01_lekargsty",
+            "resolution": 2.3
+        },
+        "1a1m": {
+            "pdb_code": "1a1m",
+            "locus": "hla-b",
+            "allele": "HLA-B*53:01",
+            "allele_slug": "hla_b_53_01",
+            "peptide": "TPYDINQML",
+            "pmhc_key": "hla_b_53_01_tpydinqml",
+            "resolution": 2.3
+        },
+        "2x4r": {
+            "pdb_code": "2x4r",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "NLVPMVATV",
+            "pmhc_key": "hla_a_02_01_nlvpmvatv",
+            "resolution": 2.3
+        },
+        "1a1o": {
+            "pdb_code": "1a1o",
+            "locus": "hla-b",
+            "allele": "HLA-B*53:01",
+            "allele_slug": "hla_b_53_01",
+            "peptide": "KPIVQYDNF",
+            "pmhc_key": "hla_b_53_01_kpivqydnf",
+            "resolution": 2.3
+        },
+        "1s9y": {
+            "pdb_code": "1s9y",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "SLLMWITQS",
+            "pmhc_key": "hla_a_02_01_sllmwitqs",
+            "resolution": 2.3
+        },
+        "2x4o": {
+            "pdb_code": "2x4o",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "KLTPLCVTL",
+            "pmhc_key": "hla_a_02_01_kltplcvtl",
+            "resolution": 2.3
+        },
+        "2bsr": {
+            "pdb_code": "2bsr",
+            "locus": "hla-b",
+            "allele": "HLA-B*27:05",
+            "allele_slug": "hla_b_27_05",
+            "peptide": "RRIYDLIEL",
+            "pmhc_key": "hla_b_27_05_rriydliel",
+            "resolution": 2.3
+        },
+        "3mrf": {
+            "pdb_code": "3mrf",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "GLCPLVAML",
+            "pmhc_key": "hla_a_02_01_glcplvaml",
+            "resolution": 2.3
+        },
+        "1eez": {
+            "pdb_code": "1eez",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "ILSALVGIL",
+            "pmhc_key": "hla_a_02_01_ilsalvgil",
+            "resolution": 2.3
+        },
+        "7lg3": {
+            "pdb_code": "7lg3",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "KLWAQCVQL",
+            "pmhc_key": "hla_a_02_01_klwaqcvql",
+            "resolution": 2.3
+        },
+        "7n6d": {
+            "pdb_code": "7n6d",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "YLQPRTFLL",
+            "pmhc_key": "hla_a_02_01_ylqprtfll",
+            "resolution": 2.3
+        },
+        "7tlt": {
+            "pdb_code": "7tlt",
+            "locus": "hla-a",
+            "allele": "HLA-A*29:02",
+            "allele_slug": "hla_a_29_02",
+            "peptide": "YFPLQSYGF",
+            "pmhc_key": "hla_a_29_02_yfplqsygf",
+            "resolution": 2.3
+        },
+        "3v5k": {
+            "pdb_code": "3v5k",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "KVAELVWFL",
+            "pmhc_key": "hla_a_02_01_kvaelvwfl",
+            "resolution": 2.31
+        },
+        "5vgd": {
+            "pdb_code": "5vgd",
+            "locus": "hla-c",
+            "allele": "HLA-C*05:01",
+            "allele_slug": "hla_c_05_01",
+            "peptide": "SAEPVPLQL",
+            "pmhc_key": "hla_c_05_01_saepvplql",
+            "resolution": 2.32
+        },
+        "6viu": {
+            "pdb_code": "6viu",
+            "locus": "hla-b",
+            "allele": "HLA-B*15:02",
+            "allele_slug": "hla_b_15_02",
+            "peptide": "TVAASGHSY",
+            "pmhc_key": "hla_b_15_02_tvaasghsy",
+            "resolution": 2.33
+        },
+        "6vb4": {
+            "pdb_code": "6vb4",
+            "locus": "hla-b",
+            "allele": "HLA-B*15:02",
+            "allele_slug": "hla_b_15_02",
+            "peptide": "TVAASGHSY",
+            "pmhc_key": "hla_b_15_02_tvaasghsy",
+            "resolution": 2.33
+        },
+        "6uzo": {
+            "pdb_code": "6uzo",
+            "locus": "hla-b",
+            "allele": "HLA-B*15:02",
+            "allele_slug": "hla_b_15_02",
+            "peptide": "HLASSGHSY",
+            "pmhc_key": "hla_b_15_02_hlassghsy",
+            "resolution": 2.35
+        },
+        "6vr1": {
+            "pdb_code": "6vr1",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "HMTEVVRRC",
+            "pmhc_key": "hla_a_02_01_hmtevvrrc",
+            "resolution": 2.37
+        },
+        "6vr5": {
+            "pdb_code": "6vr5",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "HMTEVVRHC",
+            "pmhc_key": "hla_a_02_01_hmtevvrhc",
+            "resolution": 2.38
+        },
+        "2c7u": {
+            "pdb_code": "2c7u",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "SLFNTIAVL",
+            "pmhc_key": "hla_a_02_01_slfntiavl",
+            "resolution": 2.38
+        },
+        "4nqv": {
+            "pdb_code": "4nqv",
+            "locus": "hla-a",
+            "allele": "HLA-A*01:01",
+            "allele_slug": "hla_a_01_01",
+            "peptide": "CTELKLSDY",
+            "pmhc_key": "hla_a_01_01_ctelklsdy",
+            "resolution": 2.39
+        },
+        "4hwz": {
+            "pdb_code": "4hwz",
+            "locus": "hla-a",
+            "allele": "HLA-A*68:01",
+            "allele_slug": "hla_a_68_01",
+            "peptide": "AIFQSSMTK",
+            "pmhc_key": "hla_a_68_01_aifqssmtk",
+            "resolution": 2.4
+        },
+        "3mrh": {
+            "pdb_code": "3mrh",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "CISGVCWTV",
+            "pmhc_key": "hla_a_02_01_cisgvcwtv",
+            "resolution": 2.4
+        },
+        "1sys": {
+            "pdb_code": "1sys",
+            "locus": "hla-b",
+            "allele": "HLA-B*44:03",
+            "allele_slug": "hla_b_44_03",
+            "peptide": "EEPTVIKKY",
+            "pmhc_key": "hla_b_44_03_eeptvikky",
+            "resolution": 2.4
+        },
+        "1q94": {
+            "pdb_code": "1q94",
+            "locus": "hla-a",
+            "allele": "HLA-A*11:01",
+            "allele_slug": "hla_a_11_01",
+            "peptide": "AIFQSSMTK",
+            "pmhc_key": "hla_a_11_01_aifqssmtk",
+            "resolution": 2.4
+        },
+        "7lg2": {
+            "pdb_code": "7lg2",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "ALWEIQQVV",
+            "pmhc_key": "hla_a_02_01_alweiqqvv",
+            "resolution": 2.4
+        },
+        "3l3j": {
+            "pdb_code": "3l3j",
+            "locus": "hla-b",
+            "allele": "HLA-B*44:02",
+            "allele_slug": "hla_b_44_02",
+            "peptide": "EEAGAAFSF",
+            "pmhc_key": "hla_b_44_02_eeagaafsf",
+            "resolution": 2.4
+        },
+        "6uzq": {
+            "pdb_code": "6uzq",
+            "locus": "hla-b",
+            "allele": "HLA-B*15:01",
+            "allele_slug": "hla_b_15_01",
+            "peptide": "TVRASGHSY",
+            "pmhc_key": "hla_b_15_01_tvrasghsy",
+            "resolution": 2.4
+        },
+        "1qr1": {
+            "pdb_code": "1qr1",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "IISAVVGIL",
+            "pmhc_key": "hla_a_02_01_iisavvgil",
+            "resolution": 2.4
+        },
+        "3i6l": {
+            "pdb_code": "3i6l",
+            "locus": "hla-a",
+            "allele": "HLA-A*24:02",
+            "allele_slug": "hla_a_24_02",
+            "peptide": "QFKDNVILL",
+            "pmhc_key": "hla_a_24_02_qfkdnvill",
+            "resolution": 2.4
+        },
+        "3mrl": {
+            "pdb_code": "3mrl",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "CINGVVWTV",
+            "pmhc_key": "hla_a_02_01_cingvvwtv",
+            "resolution": 2.41
+        },
+        "6o9c": {
+            "pdb_code": "6o9c",
+            "locus": "hla-a",
+            "allele": "HLA-A*03:01",
+            "allele_slug": "hla_a_03_01",
+            "peptide": "TTAPFLSGK",
+            "pmhc_key": "hla_a_03_01_ttapflsgk",
+            "resolution": 2.45
+        },
+        "5ib5": {
+            "pdb_code": "5ib5",
+            "locus": "hla-b",
+            "allele": "HLA-B*27:09",
+            "allele_slug": "hla_b_27_09",
+            "peptide": "RRKWRRWHL",
+            "pmhc_key": "hla_b_27_09_rrkwrrwhl",
+            "resolution": 2.49
+        },
+        "1a9e": {
+            "pdb_code": "1a9e",
+            "locus": "hla-b",
+            "allele": "HLA-B*35:01",
+            "allele_slug": "hla_b_35_01",
+            "peptide": "LPPLDITPY",
+            "pmhc_key": "hla_b_35_01_lpplditpy",
+            "resolution": 2.5
+        },
+        "5xs3": {
+            "pdb_code": "5xs3",
+            "locus": "hla-c",
+            "allele": "HLA-C*06:02",
+            "allele_slug": "hla_c_06_02",
+            "peptide": "VRSRRCLRL",
+            "pmhc_key": "hla_c_06_02_vrsrrclrl",
+            "resolution": 2.5
+        },
+        "1hhk": {
+            "pdb_code": "1hhk",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "LLFGYPVYV",
+            "pmhc_key": "hla_a_02_01_llfgypvyv",
+            "resolution": 2.5
+        },
+        "1hhj": {
+            "pdb_code": "1hhj",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "ILKEPVHGV",
+            "pmhc_key": "hla_a_02_01_ilkepvhgv",
+            "resolution": 2.5
+        },
+        "1b0g": {
+            "pdb_code": "1b0g",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "ALWGFFPVL",
+            "pmhc_key": "hla_a_02_01_alwgffpvl",
+            "resolution": 2.5
+        },
+        "2rfx": {
+            "pdb_code": "2rfx",
+            "locus": "hla-b",
+            "allele": "HLA-B*57:01",
+            "allele_slug": "hla_b_57_01",
+            "peptide": "LSSPVTKSF",
+            "pmhc_key": "hla_b_57_01_lsspvtksf",
+            "resolution": 2.5
+        },
+        "1hhi": {
+            "pdb_code": "1hhi",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "GILGFVFTL",
+            "pmhc_key": "hla_a_02_01_gilgfvftl",
+            "resolution": 2.5
+        },
+        "6ss7": {
+            "pdb_code": "6ss7",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "LLWAGPMAV",
+            "pmhc_key": "hla_a_02_01_llwagpmav",
+            "resolution": 2.5
+        },
+        "1s9x": {
+            "pdb_code": "1s9x",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "SLLMWITQA",
+            "pmhc_key": "hla_a_02_01_sllmwitqa",
+            "resolution": 2.5
+        },
+        "5im7": {
+            "pdb_code": "5im7",
+            "locus": "hla-b",
+            "allele": "HLA-B*58:11",
+            "allele_slug": "hla_b_58_11",
+            "peptide": "QASQEVKNW",
+            "pmhc_key": "hla_b_58_11_qasqevknw",
+            "resolution": 2.5
+        },
+        "5f9j": {
+            "pdb_code": "5f9j",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "YLSPIASPL",
+            "pmhc_key": "hla_a_02_01_ylspiaspl",
+            "resolution": 2.51
+        },
+        "3bvn": {
+            "pdb_code": "3bvn",
+            "locus": "hla-b",
+            "allele": "HLA-B*14:02",
+            "allele_slug": "hla_b_14_02",
+            "peptide": "RRRWRRLTV",
+            "pmhc_key": "hla_b_14_02_rrrwrrltv",
+            "resolution": 2.55
+        },
+        "6ujq": {
+            "pdb_code": "6ujq",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:06",
+            "allele_slug": "hla_a_02_06",
+            "peptide": "KQWLVWLLL",
+            "pmhc_key": "hla_a_02_06_kqwlvwlll",
+            "resolution": 2.55
+        },
+        "2x4s": {
+            "pdb_code": "2x4s",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "AMDSNTLEL",
+            "pmhc_key": "hla_a_02_01_amdsntlel",
+            "resolution": 2.55
+        },
+        "3to2": {
+            "pdb_code": "3to2",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "LACFVLAAV",
+            "pmhc_key": "hla_a_02_01_lacfvlaav",
+            "resolution": 2.6
+        },
+        "2xpg": {
+            "pdb_code": "2xpg",
+            "locus": "hla-a",
+            "allele": "HLA-A*03:01",
+            "allele_slug": "hla_a_03_01",
+            "peptide": "KLIETYFSK",
+            "pmhc_key": "hla_a_03_01_klietyfsk",
+            "resolution": 2.6
+        },
+        "1hhg": {
+            "pdb_code": "1hhg",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "TLTSCNTSV",
+            "pmhc_key": "hla_a_02_01_tltscntsv",
+            "resolution": 2.6
+        },
+        "5vge": {
+            "pdb_code": "5vge",
+            "locus": "hla-c",
+            "allele": "HLA-C*07:02",
+            "allele_slug": "hla_c_07_02",
+            "peptide": "RYRPGTVAL",
+            "pmhc_key": "hla_c_07_02_ryrpgtval",
+            "resolution": 2.6
+        },
+        "3l3k": {
+            "pdb_code": "3l3k",
+            "locus": "hla-b",
+            "allele": "HLA-B*44:02",
+            "allele_slug": "hla_b_44_02",
+            "peptide": "EEFGAAASF",
+            "pmhc_key": "hla_b_44_02_eefgaaasf",
+            "resolution": 2.6
+        },
+        "4l3c": {
+            "pdb_code": "4l3c",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "YLLMWITQV",
+            "pmhc_key": "hla_a_02_01_yllmwitqv",
+            "resolution": 2.64
+        },
+        "1cg9": {
+            "pdb_code": "1cg9",
+            "locus": "hla-b",
+            "allele": "HLA-B*35:01",
+            "allele_slug": "hla_b_35_01",
+            "peptide": "LPPLDITPY",
+            "pmhc_key": "hla_b_35_01_lpplditpy",
+            "resolution": 2.7
+        },
+        "6ss9": {
+            "pdb_code": "6ss9",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "LLWNGPMHV",
+            "pmhc_key": "hla_a_02_01_llwngpmhv",
+            "resolution": 2.7
+        },
+        "1qqd": {
+            "pdb_code": "1qqd",
+            "locus": "hla-c",
+            "allele": "HLA-C*04:01",
+            "allele_slug": "hla_c_04_01",
+            "peptide": "QYDDAVYKL",
+            "pmhc_key": "hla_c_04_01_qyddavykl",
+            "resolution": 2.7
+        },
+        "6z9w": {
+            "pdb_code": "6z9w",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "LLGWVFAQV",
+            "pmhc_key": "hla_a_02_01_llgwvfaqv",
+            "resolution": 2.7
+        },
+        "5mep": {
+            "pdb_code": "5mep",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "ILGKFLHWL",
+            "pmhc_key": "hla_a_02_01_ilgkflhwl",
+            "resolution": 2.71
+        },
+        "1i1f": {
+            "pdb_code": "1i1f",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "FLKEPVHGV",
+            "pmhc_key": "hla_a_02_01_flkepvhgv",
+            "resolution": 2.8
+        },
+        "1i7t": {
+            "pdb_code": "1i7t",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "ALWGVFPVL",
+            "pmhc_key": "hla_a_02_01_alwgvfpvl",
+            "resolution": 2.8
+        },
+        "2bck": {
+            "pdb_code": "2bck",
+            "locus": "hla-a",
+            "allele": "HLA-A*24:02",
+            "allele_slug": "hla_a_24_02",
+            "peptide": "VYGFVRACL",
+            "pmhc_key": "hla_a_24_02_vygfvracl",
+            "resolution": 2.8
+        },
+        "7eu2": {
+            "pdb_code": "7eu2",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "KIADYNYKL",
+            "pmhc_key": "hla_a_02_01_kiadynykl",
+            "resolution": 2.8
+        },
+        "5w69": {
+            "pdb_code": "5w69",
+            "locus": "hla-c",
+            "allele": "HLA-C*06:02",
+            "allele_slug": "hla_c_06_02",
+            "peptide": "ARFNDLRFV",
+            "pmhc_key": "hla_c_06_02_arfndlrfv",
+            "resolution": 2.8
+        },
+        "4i48": {
+            "pdb_code": "4i48",
+            "locus": "hla-a",
+            "allele": "HLA-A*68:02",
+            "allele_slug": "hla_a_68_02",
+            "peptide": "TLTSCNTSV",
+            "pmhc_key": "hla_a_68_02_tltscntsv",
+            "resolution": 2.8
+        },
+        "7n1b": {
+            "pdb_code": "7n1b",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "RLQSLQTYV",
+            "pmhc_key": "hla_a_02_01_rlqslqtyv",
+            "resolution": 2.81
+        },
+        "7re8": {
+            "pdb_code": "7re8",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "FMNKFIYEI",
+            "pmhc_key": "hla_a_02_01_fmnkfiyei",
+            "resolution": 2.82
+        },
+        "5inc": {
+            "pdb_code": "5inc",
+            "locus": "hla-b",
+            "allele": "HLA-B*58:11",
+            "allele_slug": "hla_b_58_11",
+            "peptide": "QATQEVKNW",
+            "pmhc_key": "hla_b_58_11_qatqevknw",
+            "resolution": 2.88
+        },
+        "7lgd": {
+            "pdb_code": "7lgd",
+            "locus": "hla-b",
+            "allele": "HLA-B*07:02",
+            "allele_slug": "hla_b_07_02",
+            "peptide": "SPRWYFYYL",
+            "pmhc_key": "hla_b_07_02_sprwyfyyl",
+            "resolution": 2.88
+        },
+        "7jyw": {
+            "pdb_code": "7jyw",
+            "locus": "hla-a",
+            "allele": "HLA-A*24:02",
+            "allele_slug": "hla_a_24_02",
+            "peptide": "TYQWIIRNW",
+            "pmhc_key": "hla_a_24_02_tyqwiirnw",
+            "resolution": 2.9
+        },
+        "7f4w": {
+            "pdb_code": "7f4w",
+            "locus": "hla-a",
+            "allele": "HLA-A*24:02",
+            "allele_slug": "hla_a_24_02",
+            "peptide": "NYNYLYRLF",
+            "pmhc_key": "hla_a_24_02_nynylyrlf",
+            "resolution": 2.9
+        },
+        "7s8r": {
+            "pdb_code": "7s8r",
+            "locus": "hla-a",
+            "allele": "HLA-A*11:01",
+            "allele_slug": "hla_a_11_01",
+            "peptide": "SALEWIKNK",
+            "pmhc_key": "hla_a_11_01_salewiknk",
+            "resolution": 2.95
+        },
+        "4l29": {
+            "pdb_code": "4l29",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "YLLMWITQV",
+            "pmhc_key": "hla_a_02_01_yllmwitqv",
+            "resolution": 3.09
+        },
+        "1a9b": {
+            "pdb_code": "1a9b",
+            "locus": "hla-b",
+            "allele": "HLA-B*35:01",
+            "allele_slug": "hla_b_35_01",
+            "peptide": "LPPLDITPY",
+            "pmhc_key": "hla_b_35_01_lpplditpy",
+            "resolution": 3.2
+        },
+        "6nca": {
+            "pdb_code": "6nca",
+            "locus": "hla-a",
+            "allele": "HLA-A*02:01",
+            "allele_slug": "hla_a_02_01",
+            "peptide": "YVLDHLIVV",
+            "pmhc_key": "hla_a_02_01_yvldhlivv",
+            "resolution": 3.3
+        }
+    }
+}
