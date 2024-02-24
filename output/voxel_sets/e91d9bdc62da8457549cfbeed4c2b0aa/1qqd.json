@@ -1,0 +1,194 @@
+{
+    "voxel_grid_hash": "e91d9bdc62da8457549cfbeed4c2b0aa",
+    "structure_voxels": {
+        "1": {
+            "position": 1,
+            "voxel_label": "9_6_9",
+            "atom_name": "CA",
+            "atom_coordinates": [
+                -51.088,
+                61.006,
+                63.573
+            ],
+            "voxel_start": [
+                -51.365,
+                60.031,
+                62.67
+            ],
+            "voxel_centre": [
+                -50.865,
+                60.531,
+                63.17
+            ],
+            "residue": "GLN"
+        },
+        "2": {
+            "position": 2,
+            "voxel_label": "12_6_8",
+            "atom_name": "CA",
+            "atom_coordinates": [
+                -47.476,
+                60.36,
+                62.656
+            ],
+            "voxel_start": [
+                -48.365,
+                60.031,
+                61.67
+            ],
+            "voxel_centre": [
+                -47.865,
+                60.531,
+                62.17
+            ],
+            "residue": "TYR"
+        },
+        "3": {
+            "position": 3,
+            "voxel_label": "15_8_11",
+            "atom_name": "CA",
+            "atom_coordinates": [
+                -45.04,
+                62.244,
+                64.932
+            ],
+            "voxel_start": [
+                -45.365,
+                62.031,
+                64.67
+            ],
+            "voxel_centre": [
+                -44.865,
+                62.531,
+                65.17
+            ],
+            "residue": "ASP"
+        },
+        "4": {
+            "position": 4,
+            "voxel_label": "15_11_9",
+            "atom_name": "CA",
+            "atom_coordinates": [
+                -44.551,
+                65.602,
+                63.176
+            ],
+            "voxel_start": [
+                -45.365,
+                65.031,
+                62.67
+            ],
+            "voxel_centre": [
+                -44.865,
+                65.531,
+                63.17
+            ],
+            "residue": "ASP"
+        },
+        "5": {
+            "position": 5,
+            "voxel_label": "19_11_10",
+            "atom_name": "CA",
+            "atom_coordinates": [
+                -40.997,
+                65.99,
+                64.499
+            ],
+            "voxel_start": [
+                -41.365,
+                65.031,
+                63.67
+            ],
+            "voxel_centre": [
+                -40.865,
+                65.531,
+                64.17
+            ],
+            "residue": "ALA"
+        },
+        "6": {
+            "position": 6,
+            "voxel_label": "22_10_8",
+            "atom_name": "CA",
+            "atom_coordinates": [
+                -38.166,
+                64.749,
+                62.283
+            ],
+            "voxel_start": [
+                -38.365,
+                64.031,
+                61.67
+            ],
+            "voxel_centre": [
+                -37.865,
+                64.531,
+                62.17
+            ],
+            "residue": "VAL"
+        },
+        "7": {
+            "position": 7,
+            "voxel_label": "24_8_10",
+            "atom_name": "CA",
+            "atom_coordinates": [
+                -35.58,
+                62.591,
+                64.075
+            ],
+            "voxel_start": [
+                -36.365,
+                62.031,
+                63.67
+            ],
+            "voxel_centre": [
+                -35.865,
+                62.531,
+                64.17
+            ],
+            "residue": "TYR"
+        },
+        "8": {
+            "position": 8,
+            "voxel_label": "28_9_9",
+            "atom_name": "CA",
+            "atom_coordinates": [
+                -31.855,
+                63.13,
+                63.539
+            ],
+            "voxel_start": [
+                -32.365,
+                63.031,
+                62.67
+            ],
+            "voxel_centre": [
+                -31.865000000000002,
+                63.531,
+                63.17
+            ],
+            "residue": "LYS"
+        },
+        "9": {
+            "position": 9,
+            "voxel_label": "31_6_10",
+            "atom_name": "CA",
+            "atom_coordinates": [
+                -29.117,
+                60.77,
+                64.609
+            ],
+            "voxel_start": [
+                -29.365000000000002,
+                60.031,
+                63.67
+            ],
+            "voxel_centre": [
+                -28.865000000000002,
+                60.531,
+                64.17
+            ],
+            "residue": "LEU"
+        }
+    }
+}

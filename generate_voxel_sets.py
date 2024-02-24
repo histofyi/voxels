@@ -1,13 +1,17 @@
 from typing import Dict
+
 import os
 import requests
 import json
+import hashlib
 
 from biopandas.pdb import PandasPdb
 
 
 import constants
 import functions
+
+
 
 
 ### Functions used by this script ###
@@ -109,8 +113,25 @@ def find_voxels_for_structure(peptide_df, voxels, voxel_size:int=1):
 # create the voxel grid, we only need to do this once, so it's outside the loop
 voxel_grid = functions.create_voxel_grid(constants.centre_of_mass, constants.box_xyz, constants.voxel_size, range_offset=1, y_offset=8)
 
+
+voxel_grid_hash = hashlib.md5(str(voxel_grid).encode()).hexdigest()
+
+voxel_set_filepath = f"output/voxel_sets/{voxel_grid_hash}"
+
+if not os.path.exists(voxel_set_filepath):
+    os.mkdir(voxel_set_filepath)
+
+
+with open(f"{voxel_set_filepath}/voxel_set.json", 'w') as filehandle:
+    json.dump(voxel_grid, filehandle, indent=4)
+    
+
+with open("output/structure_information/all.json", 'r') as filehandle:
+    structure_info = json.load(filehandle)
+
+
 # iterate through the test PDB codes
-for pdb_code in constants.test_pdb_codes:
+for pdb_code in structure_info['structures']:
 
     # load the peptide dataframe for the PDB code
     dataframe = load_pdb_file_to_dataframe(pdb_code, 'peptide')
@@ -119,9 +140,14 @@ for pdb_code in constants.test_pdb_codes:
     # if the dataframe is not None, find the voxels for the structure and write them to a file
         structure_voxels = find_voxels_for_structure(dataframe, voxel_grid['voxels'], voxel_size=constants.voxel_size)
 
-        filename = f"output/voxels/{pdb_code}.json"
+        voxel_data = {
+            'voxel_grid_hash': voxel_grid_hash,
+            'structure_voxels': structure_voxels
+        }
+
+        filename = f"{voxel_set_filepath}/{pdb_code}.json"
 
         with open(filename, 'w') as filehandle:
-            json.dump(structure_voxels, filehandle, indent=4)
+            json.dump(voxel_data, filehandle, indent=4)
         print (f"Voxels for {pdb_code} have been written to {filename}")
 
