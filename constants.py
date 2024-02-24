@@ -10,3 +10,5 @@ voxel_size = 1 # the size of the voxel
 canonical_pdb_code = "1hhk"
 
 test_pdb_codes = ['1hhg', '1hhi', '1hhj', '1hhk'] # the PDB codes for the test structures
+
+excluded_structures = ['2gtw','4lcy'] # the PDB codes to ignore
