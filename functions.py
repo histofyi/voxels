@@ -13,7 +13,6 @@ def create_voxel_grid(centre_of_mass:List[float], box_xyz:List[float], voxel_siz
         "labels": [],
         "metadata": {}
     }
-    
 
     cx, cy, cz = centre_of_mass
     length, width, height = box_xyz
@@ -43,7 +42,7 @@ def create_voxel_grid(centre_of_mass:List[float], box_xyz:List[float], voxel_siz
                 }
                 voxel_grid['labels'].append(voxel_label)
     
-    voxel_grid['params']['count'] = len(voxel_grid['voxels'])
+    voxel_grid['params']['voxel_count'] = len(voxel_grid['voxels'])
     
     return voxel_grid
 
