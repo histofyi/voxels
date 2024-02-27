@@ -71,18 +71,21 @@ voxel_map_hash = 'e91d9bdc62da8457549cfbeed4c2b0aa'
 
 voxel_grid = json.load(open(f"output/voxel_sets/{voxel_map_hash}/voxel_set.json", 'r'))
 
+
+# Load the MHC and peptide
 load_mhc_abd(constants.canonical_pdb_code)
 load_peptide(constants.canonical_pdb_code)
 
+
+# Display the centre of mass for the canonical class I molecule and the centre of the voxel grid
 display_pseudoatom('centre_of_box', constants.centre_of_mass, color='white')
 
+# Display the voxel grid
 display_voxel_box(constants.centre_of_mass, constants.box_xyz, voxel_grid)
 
-pdb_code = constants.canonical_pdb_code
-
+# Load the file containing the position of the used voxels and their frequency
 position_voxels = json.load(open(f"output/voxel_sets/{voxel_map_hash}/position_voxels.json", 'r'))
 
-print (position_voxels)
 
 for position in position_voxels:
 
