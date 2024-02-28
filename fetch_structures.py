@@ -34,6 +34,8 @@ def fetch_structure_info(sql_query:str) -> Dict:
         Dict: the dictionary of structures which contains the following fields in a 'structures' dict (pdb_code, locus, allele, peptide, resolution and pmhc_key - a compound key of allele_slug and lowercased peptide sequence)
     """
     query_url = 'https://datasette.histo.fyi/core.json?sql=' + sql_query
+
+    print (query_url)
     r = requests.get(query_url)
 
     rows = [row for row in r.json()['rows'] if row[0] not in excluded_structures]
@@ -96,9 +98,17 @@ i = 0
 
 downloaded = []
 cached = []
+
 for pdb_code in structure_info['structures']:
+
+    print (pdb_code)
     structure_filepath = f"structures/{pdb_code}_peptide.pdb"
 
+    allele = structure_info['structures'][pdb_code]['allele']
+    peptide = structure_info['structures'][pdb_code]['peptide']
+    pmhc_key = structure_info['structures'][pdb_code]['pmhc_key']
+    resolution = structure_info['structures'][pdb_code]['resolution']
+    
     if not os.path.exists(structure_filepath):
 
         url = f"{base_url}/{pdb_code}_1_peptide.pdb"
@@ -110,10 +120,7 @@ for pdb_code in structure_info['structures']:
             with open(structure_filepath, 'w') as filehandle:
                 filehandle.write(structure_data)
 
-            allele = structure_info[pdb_code]['allele']
-            peptide = structure_info[pdb_code]['peptide']
-            pmhc_key = structure_info[pdb_code]['pmhc_key']
-            resolution = structure_info[pdb_code]['resolution']
+            
             print(f"Downloaded {pdb_code.upper()} - {allele} binding {peptide} at {resolution}Å resolution")
 
             downloaded.append(pdb_code)
