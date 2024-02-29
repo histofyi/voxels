@@ -1,5 +1,5 @@
 from typing import List, Dict
-
+import json
 
 
 def create_voxel_grid(centre_of_mass:List[float], box_xyz:List[float], voxel_size:float, range_offset:int=0, x_offset:int=0, y_offset:int=0, z_offset:int=0):
@@ -74,7 +74,7 @@ def is_coordinate_inside_voxel(x:float, y:float, z:float, voxel_corner, voxel_si
     z_max = z_corner + float(voxel_size)
 
     # Check if the target coordinate falls within the cube's dimensions
-    is_inside = (x_corner <= x <= x_max) and (y_corner <= y <= y_max) and (z_corner <= z <= z_max)
+    is_inside = (x_corner <= x < x_max) and (y_corner <= y < y_max) and (z_corner <= z < z_max)
 
     return is_inside
 

@@ -9,7 +9,7 @@ from biopandas.pdb import PandasPdb
 
 
 import constants
-import functions
+import helpers
 
 
 
@@ -92,7 +92,7 @@ def find_voxels_for_structure(peptide_df, voxels, voxel_size:int=1):
     for coordinate in coordinates_to_check:
         for voxel in voxels:
             # if the atom is inside a specific voxel, add the voxel and the atom information to the structure_voxels dictionary
-            if functions.is_coordinate_inside_voxel(coordinate[0],coordinate[1],coordinate[2], voxels[voxel]['start'], voxel_size):
+            if helpers.is_coordinate_inside_voxel(coordinate[0],coordinate[1],coordinate[2], voxels[voxel]['start'], voxel_size):
                 structure_voxels[str(p)] = {
                     'position': p,
                     'voxel_label': voxel,
@@ -111,7 +111,7 @@ def find_voxels_for_structure(peptide_df, voxels, voxel_size:int=1):
 ### Body of the script ###
 
 # create the voxel grid, we only need to do this once, so it's outside the loop
-voxel_grid = functions.create_voxel_grid(constants.centre_of_mass, constants.box_xyz, constants.voxel_size, range_offset=1, y_offset=8)
+voxel_grid = helpers.create_voxel_grid(constants.centre_of_mass, constants.box_xyz, constants.voxel_size, range_offset=1, y_offset=8)
 
 
 voxel_grid_hash = hashlib.md5(str(voxel_grid).encode()).hexdigest()

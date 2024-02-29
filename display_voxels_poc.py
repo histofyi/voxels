@@ -1,7 +1,7 @@
 from typing import List, Dict
 import copy
 
-import functions
+import helpers
 import constants
 
 
@@ -70,7 +70,7 @@ def display_voxel_box(centre_of_mass:List[float], box_xyz:List[float], voxel_dic
 load_mhc_abd(constants.canonical_pdb_code)
 load_peptide(constants.canonical_pdb_code)
 
-voxel_grid = functions.create_voxel_grid(constants.centre_of_mass, constants.box_xyz, constants.voxel_size, range_offset=1, y_offset=8)
+voxel_grid = helpers.create_voxel_grid(constants.centre_of_mass, constants.box_xyz, constants.voxel_size, range_offset=1, y_offset=8)
 
 display_pseudoatom('centre_of_box', constants.centre_of_mass, color='white')
 

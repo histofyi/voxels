@@ -15,7 +15,7 @@ used_voxels = json.load(open(f"output/voxel_sets/{voxel_map_hash}/used_voxels.js
 
 clusters = json.load(open(f"output/clusters/{voxel_map_hash}__3__4_5_6.json", 'r'))
 
-cluster_numbers = [35]
+cluster_numbers = [20]
 
 #filter = 'hla_b_07_02'
 filter = None
