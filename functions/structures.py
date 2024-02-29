@@ -3,6 +3,7 @@ from typing import Dict, List, Union
 import requests
 import os
 
+from pymol import cmd
 from biopandas.pdb import PandasPdb
 
 from functions.helpers import deslugify_allele
@@ -176,3 +177,13 @@ def load_pdb_file_to_dataframe(pdb_code:str, domain:str, config:Dict) -> Dict:
         return structure_df.df
     else:
         return None
+    
+
+def load_pdb_file_to_pymol(pdb_code, structure_info, name = None, cluster_number = None):
+    if cluster_number:
+        cluster_number = ''
+    print (f"{cluster_number} {pdb_code}: {structure_info['structures'][pdb_code]['allele']} binding {structure_info['structures'][pdb_code]['peptide']} at {structure_info['structures'][pdb_code]['resolution']}Å resolution")
+    if not name:
+        cmd.load(f"structures/{pdb_code}_peptide.pdb")
+    else:
+        cmd.load(f"structures/{pdb_code}_peptide.pdb", name)
