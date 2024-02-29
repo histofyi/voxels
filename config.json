@@ -1,0 +1,15 @@
+{
+    "canonical_pdb_code": "1hhk",
+    "centre_of_mass": [-42.365, 56.031, 63.670],
+    "excluded_structures": ["2gtw", "4lcy"],
+    "test_pdb_codes": ["1hhg", "1hhi", "1hhj", "1hhk"],
+    "voxel_size": 1,
+    "box_xyz": [36, 20, 20],
+    "base_url": "https://coordinates.histo.fyi/structures/downloads/class_i/without_solvent",
+    "offsets": {
+        "x":0,
+        "y":0,
+        "z":0
+    },
+    "voxel_map_hash": "e91d9bdc62da8457549cfbeed4c2b0aa"
+}
