@@ -15,12 +15,19 @@ used_voxels = json.load(open(f"output/voxel_sets/{voxel_map_hash}/used_voxels.js
 
 clusters = json.load(open(f"output/clusters/{voxel_map_hash}__3__5_6.json", 'r'))
 
-cluster_numbers = [cluster for cluster in clusters.keys() if cluster != '0']
+cluster_numbers = [10, 11, 12]
 
+#filter = 'hla_b_07_02'
+filter = None
 
 structure_info = json.load(open('output/structure_information/all.json', 'r'))
 
+
+print ("Showing structures for cluster(s):", cluster_numbers)
+
 for cluster_number in cluster_numbers:
-    pdb_code = clusters[str(cluster_number)][0]
-    print (f"Cluster {cluster_number}")
-    load_structure(pdb_code) 
+    for pdb_code in clusters[str(cluster_number)]:
+        if not filter:
+            load_structure(pdb_code)
+        elif filter in structure_info['structures'][pdb_code]['allele_slug']:
+            load_structure(pdb_code)
