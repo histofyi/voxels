@@ -3,6 +3,8 @@ from typing import Dict, List, Union
 import requests
 import os
 
+from biopandas.pdb import PandasPdb
+
 from functions.helpers import deslugify_allele
 
 
@@ -131,3 +133,46 @@ def download_structure(pdb_code:str, config:Dict, verbose=False) -> Union[str, b
             error = f"PDB code {pdb_code} has failed with status {r.status_code}"
 
     return structure_data, downloaded, cached, error
+
+
+def load_pdb_file_to_dataframe(pdb_code:str, domain:str, config:Dict) -> Dict:
+    """
+    Loads a PDB file from the Histo website and returns a dataframe containing the data.
+
+    Args:
+        pdb_code (str): The PDB code of the structure to be loaded, e.g. '1hhk'.
+        domain (str): The domain of the structure to be loaded, e.g. 'peptide'.
+
+    """
+    # lowercase the pdb code for both the filename and the URL
+    pdb_code = pdb_code.lower()
+
+    # create the filename and the URL
+    filename = f"structures/{pdb_code}_{domain}.pdb"
+    url = f"{config['base_url']}/{pdb_code}_1_{domain}.pdb"
+
+    # if the file exists, read it into a dataframe
+    if os.path.exists(filename):
+        structure_df = PandasPdb().read_pdb(filename)
+
+    # otherwise, download the file and then read it into a dataframe
+    else:
+    
+        r = requests.get(url)
+        if r.status_code == 200:
+            structure_data = r.text
+
+            with open(filename, 'w') as filehandle:
+                filehandle.write(structure_data)
+
+            structure_df = PandasPdb().read_pdb(filename)
+        # if the request fails, set structure_df None and print an error message
+        else:
+            print (f"PDB code {pdb_code} has failed with status {r.status_code}")
+            structure_df = None
+
+    # if the structure_df is not None, return the dataframe
+    if structure_df:        
+        return structure_df.df
+    else:
+        return None
