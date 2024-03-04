@@ -1,6 +1,8 @@
 
 from typing import List, Dict
 
+import numpy as np
+
 def create_voxel_grid(centre_of_mass:List[float], box_xyz:List[float], voxel_size:float, range_offset:int=0, x_offset:int=0, y_offset:int=0, z_offset:int=0) -> Dict:
     """
     This function creates a voxel grid based on the centre of mass and the dimensions of the box, the size of voxels, and the range and x, y, and z offsets.
@@ -138,3 +140,31 @@ def is_coordinate_inside_voxel(x:float, y:float, z:float, voxel_corner, voxel_si
     is_inside = (x_corner <= x < x_max) and (y_corner <= y < y_max) and (z_corner <= z < z_max)
 
     return is_inside
+
+
+def neighbour_distance(test_voxel_name, reference_voxel_name):
+  xt, yt, zt = test_voxel_name.split('_')
+  xr, yr, zr = reference_voxel_name.split('_')
+
+  xdist = abs(int(xr) - int(xt))
+  ydist = abs(int(yr) - int(yt))
+  zdist = abs(int(zr) - int(zt))
+  #neighbour_dist = xdist + ydist + zdist
+  neighbour_dist = np.sqrt(xdist**2 + ydist**2 + zdist**2)
+  return neighbour_dist
+
+
+def percentage(numerator:int, denominator:int) -> float:
+  return round(numerator / denominator * 100, 2)
+
+
+def progress(value:int, max=100) -> str:
+    return HTML("""
+        <progress
+            value='{value}'
+            max='{max}',
+            style='width: 100%'
+        >
+            {value}
+        </progress>
+    """.format(value=value, max=max))

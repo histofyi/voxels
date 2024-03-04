@@ -38,3 +38,24 @@ def deslugify_allele(allele_slug:str) -> str:
     allele_components = allele_slug.split('_')
     allele_number = f"{allele_components[0]}-{allele_components[1]}*{allele_components[2]}:{allele_components[3]}"
     return allele_number.upper()
+
+
+def get_max_count(data):
+  max_count = float('-inf')  # Initialize with negative infinity
+  max_key = None
+
+  for key, value in data.items():
+      if value['count'] > max_count:
+          max_count = value['count']
+          max_key = key
+
+  return {'max_voxel_used':max_key, 'count': max_count}
+
+
+def percentage(numerator:int, denominator:int) -> float:
+  return round(numerator / denominator * 100, 2)
+
+
+def tensorize(voxel_labels:List[str]) -> List[List[int]]:
+    tensorized = [[int(value) for value in voxel_label.split('_')] for voxel_label in voxel_labels]
+    return tensorized

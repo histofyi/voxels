@@ -4,7 +4,19 @@ import requests
 import os
 
 from pymol import cmd
-from biopandas.pdb import PandasPdb
+import numpy as np
+
+try:
+    from sklearn.metrics import mean_squared_error
+except ImportError:
+    print ("sklearn not installed")
+
+try:
+    from biopandas.pdb import PandasPdb
+except ImportError:
+    print ("biopandas not installed")
+
+
 
 from functions.helpers import deslugify_allele
 
@@ -177,7 +189,7 @@ def load_pdb_file_to_dataframe(pdb_code:str, domain:str, config:Dict) -> Dict:
         return structure_df.df
     else:
         return None
-    
+
 
 def load_pdb_file_to_pymol(pdb_code, structure_info, name = None, cluster_number = None):
     if cluster_number:
@@ -187,3 +199,37 @@ def load_pdb_file_to_pymol(pdb_code, structure_info, name = None, cluster_number
         cmd.load(f"structures/{pdb_code}_peptide.pdb")
     else:
         cmd.load(f"structures/{pdb_code}_peptide.pdb", name)
+
+
+
+def calculate_max_rmsd(reference_pdb_code:str, target_pdb_code:str, structure_voxel_collection:List) -> float:
+
+    reference_structure = structure_voxel_collection[reference_pdb_code]
+    target_structure = structure_voxel_collection[target_pdb_code]
+
+    reference_calphas = [reference_structure[position]['atom_coordinates'] for position in reference_structure]
+    target_calphas = [target_structure[position]['atom_coordinates'] for position in target_structure]
+
+    comparison_rmsds = []
+    i = 0
+    for position in reference_structure:
+        rmsd = mean_squared_error(target_calphas[i], reference_calphas[i], squared=False)
+        comparison_rmsds.append(rmsd)
+        i += 1
+    return max(comparison_rmsds)
+
+
+
+def calculate_max_rmsd_for_cluster(cluster_members:List, structure_voxel_collection:List):
+    i = 0
+    cluster_max_rmsds = []
+    for member in cluster_members:
+        if i == 0:
+            reference_pdb_code = member
+        else:
+            target_pdb_code = member
+            max_rmsd = calculate_max_rmsd(reference_pdb_code, target_pdb_code, structure_voxel_collection)
+            cluster_max_rmsds.append(max_rmsd)
+            
+        i += 1
+    return max(cluster_max_rmsds)
