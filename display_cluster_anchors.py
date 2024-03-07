@@ -39,7 +39,7 @@ for cluster_number in cluster_numbers:
     for position in [5,6]:
         residue_selection = f"resi {position} and not (name c,n)"
         cmd.show('sticks', residue_selection)
-        cmd.png(f"output/images/{voxel_map_hash}/cluster_size_{min_cluster_size}/clustering_4_5_6/cluster_{cluster_number}__{position}.png", width=800, height=800, ray=1)
+        cmd.png(f"output/images/{voxel_map_hash}/cluster_size_{min_cluster_size}/clustering_4_5_6/cluster_{cluster_number}__{position}.png", width=3000, height=3000, ray=1)
 
         cmd.hide('sticks', residue_selection)
 
