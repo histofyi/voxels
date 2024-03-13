@@ -10,6 +10,20 @@ import json
 from pymol import cmd, cgo
 from colorsys import hls_to_rgb
 
+'''
+Includes the cgo_cube and ammended cubes function from the cubes pymol extension by Thomas Holder
+
+cgo_cube has not been changed
+cubes has been changed to include the colouring/transparency of the cubes based on the occupancy of the voxel
+
+Square and Tetrahedra representations
+
+(c) 2013 Thomas Holder
+
+License: BSD-2-Clause
+'''
+
+
 def cgo_cube(x, y, z, r):
     r *= 3 ** -.5
     return [
@@ -68,16 +82,143 @@ def display_pseudoatom(name:str, pos:List[float], color:str='gray80', sphere_sca
 
 
 def load_mhc_abd(pdb_code:str):
-    abd_id = f"{pdb_code}_1_abd"
-    histo_abd_url = f"{constants.base_url}/{abd_id}.cif"
-    cmd.load(histo_abd_url)
+    abd_id = "antigen_binding_domain"
+
+    print (f"{pdb_code} is the antigen binding domain")
+    histo_abd_url = f"{constants.base_url}/{pdb_code}_1_abd.cif"
+    cmd.load(histo_abd_url, abd_id)
     cmd.color('gray40', abd_id)
 
 
 def load_peptide(pdb_code: str):
-    peptide_id = f"{pdb_code}_1_peptide"
-    histo_peptide_url = f"{constants.base_url}/{peptide_id}.cif"
-    cmd.load(histo_peptide_url)
+    peptide_id = "peptide"
+    print (f"{pdb_code} is the peptide")
+    histo_peptide_url = f"{constants.base_url}/{pdb_code}_1_peptide.cif"
+    cmd.load(histo_peptide_url, peptide_id)
+    cmd.hide('everything', peptide_id)
+    cmd.color('gray50', peptide_id)
+    cmd.show('ribbon', peptide_id)
+
+
+
+def display_cleft_bounding_box(com:List, show_spheres=False):
+
+    xyz = [20, 20, 10]
+
+    #TODO automate all of this
+    # combinations, this and the bonding feels automateable
+    """
+        ---
+        -+-
+        +--
+        --+
+        ++-
+        -++
+        +-+
+        +++
+    """
+
+    lower_right_a1 = [(com[0] - xyz[0]), (com[1] - xyz[1]), (com[2] - xyz[2])]
+    upper_right_a1 = [(com[0] - xyz[0]), (com[1] + xyz[1]), (com[2] - xyz[2])]
+    lower_left_a1 = [(com[0] + xyz[0]), (com[1] - xyz[1]), (com[2] - xyz[2])]
+    upper_left_a1 = [(com[0] + xyz[0]), (com[1] + xyz[1]), (com[2] - xyz[2])]
+
+
+    lower_right_a2 = [(com[0] - xyz[0]), (com[1] - xyz[1]), (com[2] + xyz[2])]
+    upper_right_a2 = [(com[0] - xyz[0]), (com[1] + xyz[1]), (com[2] + xyz[2])]
+    lower_left_a2 = [(com[0] + xyz[0]), (com[1] - xyz[1]), (com[2] + xyz[2])]
+    upper_left_a2 = [(com[0] + xyz[0]), (com[1] + xyz[1]), (com[2] + xyz[2])]
+
+    cmd.pseudoatom('box', pos=lower_right_a1, name='LRA1')
+    cmd.pseudoatom('box', pos=upper_right_a1, name='URA1')
+    cmd.pseudoatom('box', pos=lower_left_a1, name='LLA1')
+    cmd.pseudoatom('box', pos=upper_left_a1, name='ULA1')
+    cmd.pseudoatom('box', pos=lower_right_a2, name='LRA2')
+    cmd.pseudoatom('box', pos=upper_right_a2, name='URA2')
+    cmd.pseudoatom('box', pos=lower_left_a2, name='LLA2')
+    cmd.pseudoatom('box', pos=upper_left_a2, name='ULA2')
+
+    if show_spheres:
+        cmd.show('spheres','box')
+    cmd.color('gray40','box')
+
+    cmd.bond("box////LRA1", "box////LLA1")
+    cmd.bond("box////LLA1", "box////LLA2")
+    cmd.bond("box////LLA2", "box////LRA2")
+    cmd.bond("box////LRA2", "box////LRA1")
+
+    cmd.bond("box////URA1", "box////ULA1")
+    cmd.bond("box////ULA1", "box////ULA2")
+    cmd.bond("box////ULA2", "box////URA2")
+    cmd.bond("box////URA2", "box////URA1")
+
+    cmd.bond("box////URA1", "box////LRA1")
+    cmd.bond("box////ULA1", "box////LLA1")
+    cmd.bond("box////URA2", "box////LRA2")
+    cmd.bond("box////ULA2", "box////LLA2")
+
+
+
+
+def build_plane(plane:str, corners:List):
+    plane_colours = {
+        'x':'cyan',
+        'y':'magenta',
+        'z':'orange'
+    }
+
+    plane_name = f"{plane}_plane"
+
+    cmd.pseudoatom(plane_name, pos=corners[0], name='1')
+    cmd.pseudoatom(plane_name, pos=corners[1], name='2')
+    cmd.pseudoatom(plane_name, pos=corners[2], name='3')
+    cmd.pseudoatom(plane_name, pos=corners[3], name='4')
+
+    cmd.bond(f"{plane_name}////1", f"{plane_name}////2")
+    cmd.bond(f"{plane_name}////1", f"{plane_name}////3")
+    cmd.bond(f"{plane_name}////2", f"{plane_name}////4")
+    cmd.bond(f"{plane_name}////3", f"{plane_name}////4")
+    cmd.color(plane_colours[plane], plane_name)
+
+
+
+def display_reference_planes(com:List):
+    xyz = [27, 30, 25]
+
+    y_offset = 5
+
+    x1 = [(com[0]) - xyz[0], (com[1] - y_offset), com[2] - xyz[2] ]
+    x2 = [(com[0]) + xyz[0], (com[1] - y_offset), com[2] - xyz[2] ]
+    x3 = [(com[0]) - xyz[0], (com[1] - y_offset), com[2] + xyz[2] ]
+    x4 = [(com[0]) + xyz[0], (com[1] - y_offset), com[2] + xyz[2] ]
+    
+    build_plane('x', [x1,x2,x3,x4])
+
+    y1 = [(com[0]) - xyz[0], (com[1] - y_offset), com[2]]
+    y2 = [(com[0]) + xyz[0], (com[1] - y_offset), com[2]]
+    y3 = [(com[0]) - xyz[0], (com[1] - y_offset + xyz[1]), com[2]]
+    y4 = [(com[0]) + xyz[0], (com[1] - y_offset + xyz[1]), com[2]]
+    
+    build_plane('y', [y1,y2,y3,y4])
+
+    z1 = [(com[0]), (com[1] - y_offset), (com[2] - xyz[2])]
+    z2 = [(com[0]), (com[1] - y_offset), (com[2] + xyz[2])]
+    z3 = [(com[0]), (com[1] - y_offset + xyz[1]), (com[2]- xyz[2])]
+    z4 = [(com[0]), (com[1] - y_offset + xyz[1]), (com[2] + xyz[2])]
+
+    build_plane('z', [z1,z2,z3,z4])
+
+    v1 = [(com[0]), (com[1] - y_offset), com[2] ]
+    v2 = [(com[0]), (com[1] - y_offset + xyz[1]), com[2] ]
+
+    cmd.pseudoatom('vertical', pos=v1, name='1')
+    cmd.pseudoatom('vertical', pos=v2, name='2')
+    cmd.bond("vertical////1", "vertical////2")
+    cmd.color('gray30','vertical')
+    pass
+
+
+
 
 
 voxel_map_hash = 'e91d9bdc62da8457549cfbeed4c2b0aa'
@@ -95,37 +236,34 @@ display_pseudoatom('centre_of_box', constants.centre_of_mass, color='white', opa
 
 cgo_cube(*constants.centre_of_mass, 10)
 
+display_reference_planes(constants.centre_of_mass)
+
+display_cleft_bounding_box(constants.centre_of_mass)
+
 # Load the file containing the position of the used voxels and their frequency
 position_voxels = json.load(open(f"output/voxel_sets/{voxel_map_hash}/position_voxels.json", 'r'))
 voxel_grid = json.load(open(f"output/voxel_sets/{voxel_map_hash}/voxel_set.json", 'r'))
 
 def cubes(selection='all', name='', state=0, scale=0.5, color='green', opacity=0, _func=cgo_cube):
-    '''
-    DESCRIPTION
+    """
+    This function is a modified version of the cubes function from the cubes.py extension by Thomas Holder
 
-    Create a cube representation CGO for all atoms in selection.
+    It takes a selection and creates a cube for each atom in the selection
 
-    ARGUMENTS
+    Args:
+        selection (str): The selection of atoms to create the cubes for
+        name (str): The name of the object to create
+        state (int): The state of the object
+        scale (float): The scale of the cube
+        color (str): The color of the cube
+        opacity (float): The opacity of the cube
+        _func (cgo_cube): The function to create the cube
 
-    selection = string: atom selection {default: all}
-
-    name = string: name of CGO object to create
-
-    state = int: object state {default: 0 = all states}
-
-    scale = float: scaling factor. If scale=1.0, the corners of the cube will
-    be on the VDW surface of the atom {default: 0.5}
-
-    atomcolors = 0/1: use atom colors (cannot be changed), otherwise
-    apply one color to the object (can be changed with color command)
-    {default: 1}
-
-    SEE ALSO
-
-    tetrahedra
-    '''
+    Returns:
+        None
+    """
     if not name:
-        name = 'cube_me'
+        name = 'voxel_cube'
     state, scale, color, opacity = int(state), float(scale), str(color), float(opacity)
     if state < 0:
         state = cmd.get_setting_int('state')
@@ -179,20 +317,13 @@ for position in position_voxels:
 max_occupancy = max(occupancy_counts)
 min_occupancy = min(occupancy_counts)
 
-print (max_occupancy, min_occupancy)
 
 for i, voxel in enumerate(voxels):
-        print (voxel)
-        print (occupancy_counts[i])
         normalised_count = (occupancy_counts[i] - min_occupancy) / (max_occupancy - min_occupancy) * structure_count
-        print (f"Normalised count {normalised_count}")
         occupancy = normalised_count / structure_count
         percentage_occupancy = round(occupancy * 100)
         opacity = (1.0 - round(occupancy, 1)) - 0.4
-        print (f"Percentage occupancy {percentage_occupancy}")
         voxel_centre = centres[i]
-        print (f"Opacity {opacity}")
-        
         
         display_pseudoatom(voxel, voxel_centre, color='white', opacity=opacity)
         cubes(selection=voxel, name=f'voxel_{voxel}', color=f'occupancy_{percentage_occupancy}', opacity=opacity)
