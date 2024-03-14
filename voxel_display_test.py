@@ -101,9 +101,7 @@ def load_peptide(pdb_code: str):
 
 
 
-def display_cleft_bounding_box(com:List, show_spheres=False):
-
-    xyz = [20, 20, 10]
+def display_cleft_bounding_box(com:List, xyz:List, x_offset:int=0, y_offset:int=0, z_offset:int=0, show_spheres=False):
 
     #TODO automate all of this
     # combinations, this and the bonding feels automateable
@@ -117,17 +115,20 @@ def display_cleft_bounding_box(com:List, show_spheres=False):
         +-+
         +++
     """
+    xyz = [item/2 for item in xyz]
 
-    lower_right_a1 = [(com[0] - xyz[0]), (com[1] - xyz[1]), (com[2] - xyz[2])]
-    upper_right_a1 = [(com[0] - xyz[0]), (com[1] + xyz[1]), (com[2] - xyz[2])]
-    lower_left_a1 = [(com[0] + xyz[0]), (com[1] - xyz[1]), (com[2] - xyz[2])]
-    upper_left_a1 = [(com[0] + xyz[0]), (com[1] + xyz[1]), (com[2] - xyz[2])]
+    print (y_offset)
+
+    lower_right_a1 = [(com[0] - xyz[0]) + x_offset, (com[1] - xyz[1]) + y_offset, (com[2] - xyz[2]) + z_offset]
+    upper_right_a1 = [(com[0] - xyz[0]) + x_offset, (com[1] + xyz[1]) + y_offset, (com[2] - xyz[2]) + z_offset]
+    lower_left_a1 = [(com[0] + xyz[0]) + x_offset, (com[1] - xyz[1]) + y_offset, (com[2] - xyz[2]) + z_offset]
+    upper_left_a1 = [(com[0] + xyz[0]) + x_offset, (com[1] + xyz[1]) + y_offset, (com[2] - xyz[2]) + z_offset]
 
 
-    lower_right_a2 = [(com[0] - xyz[0]), (com[1] - xyz[1]), (com[2] + xyz[2])]
-    upper_right_a2 = [(com[0] - xyz[0]), (com[1] + xyz[1]), (com[2] + xyz[2])]
-    lower_left_a2 = [(com[0] + xyz[0]), (com[1] - xyz[1]), (com[2] + xyz[2])]
-    upper_left_a2 = [(com[0] + xyz[0]), (com[1] + xyz[1]), (com[2] + xyz[2])]
+    lower_right_a2 = [(com[0] - xyz[0]) + x_offset, (com[1] - xyz[1]) + y_offset, (com[2] + xyz[2]) + z_offset]
+    upper_right_a2 = [(com[0] - xyz[0]) + x_offset, (com[1] + xyz[1]) + y_offset, (com[2] + xyz[2]) + z_offset]
+    lower_left_a2 = [(com[0] + xyz[0]) + x_offset, (com[1] - xyz[1]) + y_offset, (com[2] + xyz[2]) + z_offset]
+    upper_left_a2 = [(com[0] + xyz[0]) + x_offset, (com[1] + xyz[1]) + y_offset, (com[2] + xyz[2]) + z_offset]
 
     cmd.pseudoatom('box', pos=lower_right_a1, name='LRA1')
     cmd.pseudoatom('box', pos=upper_right_a1, name='URA1')
@@ -218,32 +219,6 @@ def display_reference_planes(com:List):
     pass
 
 
-
-
-
-voxel_map_hash = 'e91d9bdc62da8457549cfbeed4c2b0aa'
-
-voxel_grid = json.load(open(f"output/voxel_sets/{voxel_map_hash}/voxel_set.json", 'r'))
-
-
-# Load the MHC and peptide
-load_mhc_abd(constants.canonical_pdb_code)
-load_peptide(constants.canonical_pdb_code)
-
-
-# Display the centre of mass for the canonical class I molecule and the centre of the voxel grid
-display_pseudoatom('centre_of_box', constants.centre_of_mass, color='white', opacity=0)
-
-cgo_cube(*constants.centre_of_mass, 10)
-
-display_reference_planes(constants.centre_of_mass)
-
-display_cleft_bounding_box(constants.centre_of_mass)
-
-# Load the file containing the position of the used voxels and their frequency
-position_voxels = json.load(open(f"output/voxel_sets/{voxel_map_hash}/position_voxels.json", 'r'))
-voxel_grid = json.load(open(f"output/voxel_sets/{voxel_map_hash}/voxel_set.json", 'r'))
-
 def cubes(selection='all', name='', state=0, scale=0.5, color='green', opacity=0, _func=cgo_cube):
     """
     This function is a modified version of the cubes function from the cubes.py extension by Thomas Holder
@@ -290,37 +265,75 @@ def cubes(selection='all', name='', state=0, scale=0.5, color='green', opacity=0
     cmd.delete(selection)
 
 
-cmd.extend('cubes', cubes)
-
 def rainbow_color_steps(steps:int, end=6/8):
     raw_colors = [hls_to_rgb(end * i/(steps-1), 0.5, 1) for i in range(steps)]
     return [[int(175 * x) for x in color] for color in raw_colors]
 
+### Main function below ###
+
+voxel_map_hash = 'e91d9bdc62da8457549cfbeed4c2b0aa'
+
+voxel_grid = json.load(open(f"output/voxel_sets/{voxel_map_hash}/voxel_set.json", 'r'))
+
+print (voxel_grid['params'])
+
+# Load the MHC and peptide
+load_mhc_abd(constants.canonical_pdb_code)
+load_peptide(constants.canonical_pdb_code)
+
+
+# Display the centre of mass for the canonical class I molecule and the centre of the voxel grid
+display_pseudoatom('centre_of_box', voxel_grid['params']['centre_of_mass'], color='white', opacity=0)
+
+display_reference_planes(voxel_grid['params']['centre_of_mass'])
+
+display_cleft_bounding_box(voxel_grid['params']['centre_of_mass'], voxel_grid['params']['box_xyz'], y_offset=voxel_grid['params']['y_offset'], show_spheres=False)
+
+# Load the file containing the position of the used voxels and their frequency
+position_voxels = json.load(open(f"output/voxel_sets/{voxel_map_hash}/position_voxels.json", 'r'))
+voxel_grid = json.load(open(f"output/voxel_sets/{voxel_map_hash}/voxel_set.json", 'r'))
+
+# we'll now make the cubes method available as an extension in Pymol
+cmd.extend('cubes', cubes)
+
+
+
+# first we'll set up the colours for the occupancies
 colour_steps = rainbow_color_steps(101)
 
 for i, colour in enumerate(colour_steps):
     cmd.set_color(f'occupancy_{i}', colour)
 
-
+# next we'll create arrays for the voxes, the raw occupancy counts and the voxel centres
 voxels = []
 occupancy_counts = []
 centres = []
 
+# iterate through the position voxels dictionary
 for position in position_voxels:
+    # we'll create a count of the structures in the dictionary for use later in creating percentages
     structure_count = 0
+    # for each voxel at a specific position
     for voxel in position_voxels[position]:
+        # append the voxe address to the voxels array
         voxels.append(voxel)
+        # add the occupancy count to the occupancy_counts array
         occupancy_counts.append(position_voxels[position][voxel]['count'])
+        # increment the structure count by the count for that voxel
         structure_count += position_voxels[position][voxel]['count']
+        # append the voxel centre to the array
         centres.append(voxel_grid['voxels'][voxel]['centre'])
 
+# now we'll find the max and min occupancy for normalisation
 max_occupancy = max(occupancy_counts)
 min_occupancy = min(occupancy_counts)
 
-
+# for each voxel address
 for i, voxel in enumerate(voxels):
-        normalised_count = (occupancy_counts[i] - min_occupancy) / (max_occupancy - min_occupancy) * structure_count
-        occupancy = normalised_count / structure_count
+        # get a normalised count
+        normalised_count = (occupancy_counts[i] - min_occupancy) / (max_occupancy - min_occupancy)
+        
+        occupancy = normalised_count
         percentage_occupancy = round(occupancy * 100)
         opacity = (1.0 - round(occupancy, 1)) - 0.4
         voxel_centre = centres[i]
@@ -329,6 +342,14 @@ for i, voxel in enumerate(voxels):
         cubes(selection=voxel, name=f'voxel_{voxel}', color=f'occupancy_{percentage_occupancy}', opacity=opacity)
 
 cmd.reset()
+
+cmd.set_view("""\
+     0.712135971,    0.638299167,   -0.292294502,\
+     0.037353292,    0.381308764,    0.923692703,\
+     0.701047778,   -0.668712735,    0.247700989,\
+     0.000000000,    0.000000000, -231.989013672,\
+   -42.237426758,   56.492870331,   63.704917908,\
+   195.578369141,  268.399658203,  -20.000000000 """)
 
 
 
