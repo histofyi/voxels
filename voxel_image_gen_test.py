@@ -289,13 +289,32 @@ load_mhc_abd(constants.canonical_pdb_code)
 # Display the centre of mass for the canonical class I molecule and the centre of the voxel grid
 display_pseudoatom('centre_of_box', voxel_grid['params']['centre_of_mass'], color='white', opacity=0)
 
+print ('image of MHC and centre of mass')
+cmd.png(f"output/images/mhc_and_com.png", width=3000, height=3000, ray=1)
+
 
 load_peptide(constants.canonical_pdb_code)
 
+cmd.reset()
+
+cmd.set_view("""\
+     0.712135971,    0.638299167,   -0.292294502,\
+     0.037353292,    0.381308764,    0.923692703,\
+     0.701047778,   -0.668712735,    0.247700989,\
+     0.000000000,    0.000000000, -231.989013672,\
+   -42.237426758,   56.492870331,   63.704917908,\
+   195.578369141,  268.399658203,  -20.000000000 """)
+
+cmd.png(f"output/images/mhc_com_and_peptide.png", width=3000, height=3000, ray=1)
 
 
 display_reference_planes(voxel_grid['params']['centre_of_mass'])
+
+cmd.png(f"output/images/mhc_com_and_peptide_and_planes.png", width=3000, height=3000, ray=1)
+
 display_cleft_bounding_box(voxel_grid['params']['centre_of_mass'], voxel_grid['params']['box_xyz'], y_offset=voxel_grid['params']['y_offset'], show_spheres=False)
+
+cmd.png(f"output/images/mhc_com_and_peptide_and_planes_and_box.png", width=3000, height=3000, ray=1)
 
 # Load the file containing the position of the used voxels and their frequency
 position_voxels = json.load(open(f"output/voxel_sets/{voxel_map_hash}/position_voxels.json", 'r'))
@@ -359,6 +378,24 @@ cmd.set_view("""\
      0.000000000,    0.000000000, -231.989013672,\
    -42.237426758,   56.492870331,   63.704917908,\
    195.578369141,  268.399658203,  -20.000000000 """)
+
+cmd.png(f"output/images/all.png", width=3000, height=3000, ray=1)
+
+
+cmd.hide('everything', 'centre_of_box')
+cmd.hide('everything', 'x_plane')
+cmd.hide('everything', 'y_plane')
+cmd.hide('everything', 'z_plane')
+cmd.hide('everything', 'vertical')
+
+cmd.png(f"output/images/no_planes_no_com.png", width=3000, height=3000, ray=1)
+
+cmd.hide('everything', 'antigen_binding_domain')
+
+cmd.png(f"output/images/peptide_and_bounding_box.png", width=3000, height=3000, ray=1)
+cmd.hide('everything', 'peptide')
+
+cmd.png(f"output/images/voxels_and_bounding_box.png", width=3000, height=3000, ray=1)
 
 
 
